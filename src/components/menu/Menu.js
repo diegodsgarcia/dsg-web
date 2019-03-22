@@ -5,6 +5,9 @@ import './Menu.scss'
 class Menu extends Component {
   constructor() {
     super()
+    this.state = {
+      isOpen: false,
+    }
     this.elementRef = createRef()
   }
 
@@ -13,13 +16,13 @@ class Menu extends Component {
       <div className='menu' ref={this.elementRef}>
         <ul className='menu__list'>
           <li className='menu__item'>
-            Works
-          </li>
-          <li className='menu__item'>
-            My life style
+            About
           </li>
           <li className='menu__item'>
             Works
+          </li>
+          <li className='menu__item'>
+            Contact
           </li>
         </ul>
       </div>
@@ -28,11 +31,6 @@ class Menu extends Component {
 
   componentDidMount() {
     TweenMax.fromTo(this.elementRef.current, 1, { height: '0' }, { height: '100%'})
-  }
-
-  componentDidUpdate() {
-    console.log(1)
-    TweenMax.to(this.elementRef.current, 1, { height: '0' })
   }
 }
 

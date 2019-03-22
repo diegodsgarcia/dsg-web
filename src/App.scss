@@ -10,3 +10,30 @@ html, body, .App, #root {
 .App {
   position: relative;
 }
+
+.container {
+  max-width: 1000px;
+  padding: 40px 0;
+  margin: 0 auto;
+
+  @media (max-width: 1000px) {
+    padding: 40px 20px;
+  }
+}
+
+.section {
+  padding: 20px 0;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 4em;
+  margin: 20px 0;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.6em;
+}
