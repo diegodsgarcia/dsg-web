@@ -3,11 +3,16 @@ import Menu from '../menu/Menu'
 import './Header.scss'
 
 class Header extends Component  {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props);
+
     this.state = {
-      isNavigationOpen: false
+      visible: false
     }
+  }
+
+  setMenuVisible(visible) {
+    this.setState({ visible });
   }
 
   render() {
@@ -15,19 +20,17 @@ class Header extends Component  {
       <header className='header'>
         <div 
           className='navigation__menu'
-          onClick={this.onOpenNavigation.bind(this)}>
+          onClick={this.setMenuVisible.bind(this, true)}>
         </div>
         <nav 
           className='navigation'
           ref={this.menuRef}>
-          { this.state.isNavigationOpen && <Menu isOpen={this.state.isNavigationOpen} /> }
+            <Menu 
+              visible={this.state.visible}
+              close={this.setMenuVisible.bind(this, false)}/> 
         </nav>
       </header>
   )}
-
-  onOpenNavigation() {
-    this.setState({ isNavigationOpen: !this.state.isNavigationOpen })
-  }
 }
 
 export default Header

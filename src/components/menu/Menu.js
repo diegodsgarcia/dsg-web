@@ -1,19 +1,20 @@
-import React, { Component, createRef } from 'react'
-import { TweenMax } from 'gsap'
+import React, { Component } from 'react'
+import { TimelineMax } from 'gsap'
 import './Menu.scss'
 
 class Menu extends Component {
-  constructor() {
-    super()
-    this.state = {
-      isOpen: false,
-    }
-    this.elementRef = createRef()
+  constructor(props) {
+    super();
+    this.menuTween = new TimelineMax({ paused: true });
+    this.elementRef = null;
   }
 
   render() {
     return (
-      <div className='menu' ref={this.elementRef}>
+      <div className='menu' ref={div => this.elementRef = div} style={{ transform: 'translateX(-100%)' }}>
+        <button className='menu__close' onClick={this.props.close}>
+          Close
+        </button>
         <ul className='menu__list'>
           <li className='menu__item'>
             About
@@ -30,8 +31,15 @@ class Menu extends Component {
   }
 
   componentDidMount() {
-    TweenMax.fromTo(this.elementRef.current, 1, { height: '0' }, { height: '100%'})
+    this.menuTween
+      .to(this.elementRef, .4, { x: 0 })
+      .reversed(true)
+      .paused(false)
+  }
+
+  componentDidUpdate() {
+    this.menuTween.reversed(!this.props.visible);
   }
 }
 
-export default Menu
+export default Menu;
