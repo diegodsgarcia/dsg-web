@@ -1,0 +1,22 @@
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.main__dsg {
+  font-size: 12em;
+  letter-spacing: 20px;
+}
+
+.main__scroll {
+  position: absolute;
+  font-size: 1.4em;
+  bottom: 40px;
+}
