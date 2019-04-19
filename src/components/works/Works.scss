@@ -4,3 +4,15 @@
   background-color: #000000;
   color: #ffffff;
 }
+
+.works__jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  margin: 20px 0;
+}
+
+.works__job {
+  height: 250px;
+  background-color: #ffffff;
+}

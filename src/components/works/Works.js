@@ -1,4 +1,5 @@
 import React from 'react'
+import Typing from '../typing/Typing';
 import './Works.scss'
 
 const Works = () => (
@@ -7,12 +8,12 @@ const Works = () => (
       <h1 className='title'>
         Works
       </h1>
-      <p className='description'> 
+      <Typing>
         Here is about a little about my job :).
-      </p>
+      </Typing>
       <div className='works__jobs'>
-        {[1, 2, 3, 4, 5].map((value, i) =>(
-          <div key={i}>
+        {[1, 2, 3].map((value, i) =>(
+          <div key={i} className='works__job'>
             <span>Job {value}</span>
           </div>
         ))}

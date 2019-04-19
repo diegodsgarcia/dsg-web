@@ -11,8 +11,16 @@
 }
 
 .main__dsg {
-  font-size: 12em;
-  letter-spacing: 20px;
+  display: inline-block;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  border-right: 2px solid #ffffff;
+
+  @media (min-width: 1000px) {
+    border-right-width: 10px;
+    font-size: 20rem;
+    letter-spacing: 20px;
+  }
 }
 
 .main__scroll {
