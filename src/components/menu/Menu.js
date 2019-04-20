@@ -17,13 +17,13 @@ class Menu extends Component {
         </button>
         <ul className='menu__list'>
           <li className='menu__item'>
-            <a className='menu__link' href="#about">About</a>
+            <a className='menu__link' href="#about" onClick={this.props.navigateTo}>About</a>
           </li>
           <li className='menu__item'>
-            <a className='menu__link' href="#works">Works</a>
+            <a className='menu__link' href="#works" onClick={this.props.navigateTo}>Works</a>
           </li>
           <li className='menu__item'>
-            <a className='menu__link' href="#works">Contact</a>
+            <a className='menu__link' href="#contact" onClick={this.props.navigateTo}>Contact</a>
           </li>
         </ul>
       </div>

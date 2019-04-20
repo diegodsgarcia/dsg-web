@@ -27,12 +27,6 @@ class About extends Component {
   }
 
   componentDidMount() {
-    // const text = this.elementRef.textContent.trim().replace(/(\S+?)/g, '<span>$1</span>');
-    // this.elementRef.innerHTML = text;
-    // const spans = this.elementRef.querySelectorAll('span');
-
-    // this.tl.staggerFromTo(spans, .3, { display: 'none' }, { display: 'inline' }, .03)
-    // this.tl.play();
   }
 
 }

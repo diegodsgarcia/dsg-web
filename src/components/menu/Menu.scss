@@ -22,9 +22,31 @@
 }
 
 .menu__link {
-  color: #ffffff;
+  position: relative;
+  padding: 5px 0;
+  color: darken(#ffffff, 20%);
   font-size: 1.5em;
   text-decoration: none;
+  transition: .5s ease-out color;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: .2s ease-out width;
+  }
+
+  &:hover {
+    color: #ffffff;
+
+    &:after {
+      width: 100%;
+    }
+  }
 }
 
 .menu__close {
