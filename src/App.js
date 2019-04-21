@@ -23,7 +23,7 @@ class App extends Component {
       <div className='App'>
         <Main />
         <Header />
-        <About />
+        <About sections={this.state} />
         <Works />
         <Contact />
       </div>

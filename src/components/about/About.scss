@@ -1,5 +1,24 @@
-@import '../../theme';
-
 .about {
 
+}
+
+.skills {
+  font-size: 1.4em;
+}
+
+.skill__item {
+  margin: 20px 0;
+  display: flex;
+}
+
+.skill__name {
+  margin: 0 10px;
+}
+
+.skill__icon {
+  margin: 0 20px;
+}
+
+.skill__actually {
+  margin: 0 10px;
 }

@@ -22,7 +22,13 @@ class Typing extends Component {
     const spans = this.element.querySelectorAll('span');
 
     this.tl.staggerFromTo(spans, .3, { display: 'none' }, { display: 'inline' }, .03);
-    this.tl.play();
+    
+  }
+
+  componentDidUpdate() {
+    if (this.props.play) {
+      this.tl.play();
+    }
   }
 }
 

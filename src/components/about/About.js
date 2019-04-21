@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { TimelineMax } from 'gsap';
+import { about } from '../../i18n/texts';
 import Typing from '../typing/Typing';
 import './About.scss';
 
 class About extends Component {
   constructor(props) {
     super();
+    this.state = {
+      throwSection: false,
+    }
     this.tl = new TimelineMax({ paused: true });
     this.elementRef = null;
   }
@@ -17,16 +21,37 @@ class About extends Component {
         <h1 className='title'>
           About
         </h1>
-        <Typing>
-          My name is Diego Garcia, I'm a web developer for 5 year ago. I love all about Javascript and Front-end My main robe is skateboarding and play
-          Path of Exile.
+        <Typing play={this.state.throwSection}>
+          {about.description}
         </Typing>
+        <div className='skills'>
+          {about.skills.map((skill, i) => (
+            <div className='skill__item' key={i}>
+              <div className='skill__icon'>
+                <i className={skill.icon}></i>
+              </div>
+              <div className='skill__name'>
+                {skill.name}
+              </div>
+              <div className='skill__description'>
+                <span className='skill__actually'>{skill.actually}</span>
+                <span className='skill__rage'>{skill.rage}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
     )
   }
 
   componentDidMount() {
+  }
+
+  componentDidUpdate() {
+    // this.setState({ throwSection: !!this.props.sections.stackSection.find(section => section.className === 'section about')})
+    console.log(!!this.props.sections.stackSection.find(section => section.className === 'section about'));
+    console.log(this.props.sections);
   }
 
 }
