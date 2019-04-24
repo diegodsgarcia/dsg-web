@@ -19,7 +19,7 @@ class About extends Component {
       <section className='section about'>
       <div className='container'>
         <h1 className='title'>
-          About
+          About me
         </h1>
         <Typing play={this.state.throwSection}>
           {about.description}
