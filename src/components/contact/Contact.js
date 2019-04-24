@@ -12,9 +12,9 @@ const Contact = () => (
         Follow-me or Contact-me in my social media!
       </Typing>
       <div className='social'>
-        <a title='G-mail' className='social__link icon-gmail' href='mailto:diego.ds.garcia@gmail.com' target='_blank'></a>
-        <a title='Instagram' className='social__link icon-instagram' href='https://www.instagram.com/diegodsgarcia/' target='_blank'></a>
-        <a title='Twitter' className='social__link icon-twitter' href='https://twitter.com/diegodsgarcia' target='_blank'></a>
+        <a title='G-mail' className='social__link icon-gmail' href='mailto:diego.ds.garcia@gmail.com'></a>
+        <a title='Instagram' className='social__link icon-instagram' href='https://www.instagram.com/diegodsgarcia/'></a>
+        <a title='Twitter' className='social__link icon-twitter' href='https://twitter.com/diegodsgarcia'></a>
       </div>
     </div>
 

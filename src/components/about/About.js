@@ -50,8 +50,7 @@ class About extends Component {
 
   componentDidUpdate() {
     // this.setState({ throwSection: !!this.props.sections.stackSection.find(section => section.className === 'section about')})
-    console.log(!!this.props.sections.stackSection.find(section => section.className === 'section about'));
-    console.log(this.props.sections);
+    // console.log(!!this.props.sections.stackSection.find(section => section.className === 'section about'));
   }
 
 }
