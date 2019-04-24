@@ -9,23 +9,21 @@ import './App.scss';
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      currentSection: null,
-      stackSection: []
-    };
-    this.sections = [];
-  }
+  state = {
+    currentSection: null,
+    stackSection: []
+  };
+
+  sections = [];
 
   render() {
     return (
       <div className='App'>
         <Main />
         <Header />
-        <About sections={this.state} />
-        <Works />
-        <Contact />
+        <About sections={this.state.stackSection} />
+        <Works sections={this.state.stackSection} />
+        <Contact sections={this.state.stackSection} />
       </div>
     );
   }
@@ -56,17 +54,17 @@ class App extends Component {
       });
 
       if (!this.state.currentSection) {
-        this.setState({ currentSection: foundSection});
+        
         this.state.stackSection.push(foundSection);
+        this.setState({ currentSection: foundSection});
         return;
       }
 
       if (this.state.currentSection.className !== foundSection.className) {
-        this.setState({ currentSection: foundSection});
-
         if (!this.state.stackSection.find(section => section.className === foundSection.className)) {
           this.state.stackSection.push(foundSection);
         }
+        this.setState({ currentSection: foundSection});
       }
     })
   }

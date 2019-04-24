@@ -12,13 +12,13 @@
 
 .main__dsg {
   display: inline-block;
-  font-size: 5rem;
+  font-size: 8em;
   letter-spacing: 5px;
   border-right: 2px solid #ffffff;
 
   @media (min-width: 1000px) {
     border-right-width: 10px;
-    font-size: 20rem;
+    font-size: 15em;
     letter-spacing: 20px;
   }
 }

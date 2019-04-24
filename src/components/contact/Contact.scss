@@ -1,15 +1,20 @@
 .contact {
-
+  display: flex;
+  align-items: center;
 }
 
 .social {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 40px 0;
 }
 
 .social__link {
-  font-size: 1.8em;
+  font-size: 2.8em;
   margin: 0 20px;
   text-decoration: none;
+
+  span {
+    font-size: 0;
+  }
 }
