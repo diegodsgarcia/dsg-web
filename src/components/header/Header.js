@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TweenMax } from 'gsap/all'
+import { TweenMax, ScrollToPlugin } from 'gsap/all'
 import Menu from '../menu/Menu'
 import './Header.scss'
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TimelineMax } from 'gsap'
+import { TimelineMax } from 'gsap/all'
 import './Menu.scss'
 
 class Menu extends Component {
