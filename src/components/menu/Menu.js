@@ -14,13 +14,13 @@ class Menu extends Component {
         </button>
         <ul className='menu__list'>
           <li className='menu__item'>
-            <a className='menu__link' href="#about" onClick={this.props.navigateTo}>About</a>
+            <a className='menu__link' href="#about" onClick={this.props.navigateTo.bind(this)}>About</a>
           </li>
           <li className='menu__item'>
-            <a className='menu__link' href="#works" onClick={this.props.navigateTo}>Works</a>
+            <a className='menu__link' href="#works" onClick={this.props.navigateTo.bind(this)}>Works</a>
           </li>
           <li className='menu__item'>
-            <a className='menu__link' href="#contact" onClick={this.props.navigateTo}>Contact</a>
+            <a className='menu__link' href="#contact" onClick={this.props.navigateTo.bind(this)}>Contact</a>
           </li>
         </ul>
       </div>
