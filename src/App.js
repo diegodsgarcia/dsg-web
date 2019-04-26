@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ScrollToPlugin } from 'gsap/all';
 import Section from './model/Section';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
@@ -6,6 +7,9 @@ import About from './components/about/About';
 import Works from './components/works/Works';
 import Contact from './components/contact/Contact';
 import './App.scss';
+
+// eslint-disable-next-line no-unused-vars
+const plugins = [ScrollToPlugin];
 
 class App extends Component {
 
