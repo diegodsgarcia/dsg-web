@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
-import { TweenMax, ScrollToPlugin } from 'gsap/all'
-import Menu from '../menu/Menu'
-import './Header.scss'
+import React, { Component } from 'react';
+import { TweenMax } from 'gsap/all';
+import Menu from '../menu/Menu';
+import './Header.scss';
 
-// eslint-disable-next-line no-unused-vars
-const plugins = [ ScrollToPlugin ];
 
 class Header extends Component  {
   state = {

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { TimelineMax, TweenMax, Power0 } from 'gsap/all';
-import './Main.scss'
+import './Main.scss';
 
 class Main extends Component {
   tl = new TimelineMax({ paused: true });
