@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TimelineMax } from 'gsap';
 import Utils from '../../utils/Utils';
 import Typing from '../typing/Typing';
 import './Contact.scss';
@@ -6,8 +7,10 @@ import './Contact.scss';
 class Contact extends Component {
   state = {
     canAnimate: false,
+    wasAnimate: false,
   }
   sectionName = 'section contact';
+  tl = new TimelineMax({ paused: true });
 
   render() {
     return (
@@ -35,8 +38,23 @@ class Contact extends Component {
     )
   }
 
+  componentDidMount() {
+    this.tl.staggerFrom('.social__link', .5, { y: 50, autoAlpha: 0 }, .3);
+  }
+
   componentWillReceiveProps(nextProps) {
     this.setState({ canAnimate: Utils.findSection(nextProps.sections, this.sectionName)});
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    if (nextState.canAnimate && !nextState.wasAnimate) {
+      this.executeAnimation();
+    }
+  }
+
+  executeAnimation() {
+    this.tl.play();
+    this.setState({ wasAnimate: true })
   }
 }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TimelineMax } from 'gsap';
 import Utils from '../../utils/Utils';
 import { about } from '../../i18n/texts';
 import Typing from '../typing/Typing';
@@ -7,8 +8,10 @@ import './About.scss';
 class About extends Component {
   state = {
     canAnimate: false,
+    wasAnimate: false,
   }
   sectionName = 'section about';
+  tl = new TimelineMax({ paused: true });
 
   render() {
     return (
@@ -41,8 +44,23 @@ class About extends Component {
     )
   }
 
+  componentDidMount() {
+    this.tl.staggerFrom('.skill__item', .7, { cycle: { x: [100, -100]}, autoAlpha: 0 }, .5);
+  }
+
   componentWillReceiveProps(nextProps) {
     this.setState({ canAnimate: Utils.findSection(nextProps.sections, this.sectionName)})
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    if (nextState.canAnimate && !nextState.wasAnimate) {
+      this.executeAnimation();
+    }
+  }
+
+  executeAnimation() {
+    this.tl.play();
+    this.setState({ wasAnimate: true })
   }
 
 }

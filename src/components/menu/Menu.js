@@ -3,11 +3,8 @@ import { TimelineMax } from 'gsap/all'
 import './Menu.scss'
 
 class Menu extends Component {
-  constructor() {
-    super();
-    this.tl = new TimelineMax({ paused: true });
-    this.elementRef = null;
-  }
+  tl = new TimelineMax({ paused: true });
+  elementRef;
 
   render() {
     return (

@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import { TimelineMax, Power0 } from 'gsap';
+import { TimelineMax, TweenMax, Power0 } from 'gsap/all';
 import './Main.scss'
 
 class Main extends Component {
-  constructor() {
-    super();
-    this.tl = new TimelineMax({ paused: true });
-    this.title = null;
-  }
+  tl = new TimelineMax({ paused: true });
+  title;
+  scrollText;
+  scrollIcon;
 
   render() {
     return (
@@ -15,22 +14,33 @@ class Main extends Component {
       <h1 className='main__dsg' ref={el => this.title = el}>
         DSG
       </h1>
-      <p className='main__scroll'>scroll down</p>
+      <div className='main__scroll' onClick={this.scrollDown.bind(this)}>
+        <span className='main__scroll-text' ref={el => this.scrollText = el}>scroll down</span>
+        <span className='main__scroll-icon' ref={el => this.scrollIcon = el}></span>
+      </div>
+
     </section>
     );
   }
 
   componentDidMount() {
     this.title.innerHTML = this.title.textContent.trim().replace(/(\S+?)/g, '<span>$1</span>');
-    const spans = this.title.querySelectorAll('span');
-
+    this.scrollText.innerHTML = this.scrollText.textContent.trim().replace(/(\S+?)/g, '<span>$1</span>');
+    const title = this.title.querySelectorAll('span');
+    const scrollText = this.scrollText.querySelectorAll('span');
     const cursor = new TimelineMax({ repeat: -1 }).to(this.title, .5, { borderRightColor: 'transparent' }, Power0.easeNone ).yoyo(true)
 
     this.tl
-      .staggerFromTo(spans, .3, { display: 'none'}, { display: 'inline' }, .2)
-      .add(cursor);
-
+      .staggerFromTo(title, .3, { display: 'none'}, { display: 'inline' }, .2)
+      .add(cursor)
+      .staggerFromTo(scrollText, .3, { display: 'none'}, { display: 'inline' }, .08)
+      .set(this.scrollIcon, { rotation: 45, x: '-50%' })
+      .from(this.scrollIcon, .3, { y: 20, autoAlpha: 0 });
     this.tl.play();
+  }
+
+  scrollDown() {
+    TweenMax.to(window, .8, {scrollTo: `.about`});
   }
 }
 

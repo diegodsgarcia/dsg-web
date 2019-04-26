@@ -7,12 +7,8 @@ import './Header.scss'
 const plugins = [ ScrollToPlugin ];
 
 class Header extends Component  {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      visible: false
-    }
+  state = {
+    visible: false
   }
 
   setMenuVisible(visible) {
@@ -45,4 +41,4 @@ class Header extends Component  {
   }
 }
 
-export default Header
+export default Header;
