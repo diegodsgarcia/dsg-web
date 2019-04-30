@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { TimelineMax } from 'gsap';
+import { TimelineMax, TweenMax } from 'gsap/all';
 import Utils from '../../utils/Utils';
 import Typing from '../typing/Typing';
+import { works } from '../../i18n/texts';
 import './Works.scss';
 
+
 class Works extends Component {
+
   state = {
     canAnimate: false,
   }
@@ -19,12 +22,13 @@ class Works extends Component {
             Works
           </h1>
           <Typing play={this.state.canAnimate}>
-            Here is about a little about my job :).
+            {works.description}
           </Typing>
           <div className='works__jobs'>
-            {[1, 2, 3].map((value, i) =>(
-              <div key={i} className='works__job'>
-                <span>Job {value}</span>
+            {works.jobs.map((job, i) =>(
+              <div key={i} className='works__job' onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+                <img src={job.figure} alt={job.title} />
+                <span>{job.title}</span>
               </div>
             ))}
           </div>
@@ -34,7 +38,9 @@ class Works extends Component {
   }
 
   componentDidMount() {
-    this.tl.staggerFrom('.works__job', .5, { scale: 0 }, .3);
+    this.tl
+      .staggerFrom('.works__job', .5, { scale: 0 }, .3)
+      .set('.works__job', { clearProps: 'all'} );
   }
 
   componentWillReceiveProps(nextProps) {
@@ -45,6 +51,16 @@ class Works extends Component {
     if (nextState.canAnimate && !nextState.wasAnimate) {
       this.executeAnimation();
     }
+  }
+
+  onMouseEnter(event) {
+    const element = event.currentTarget
+    TweenMax.to(element, .3, { scale: 1.05 });
+  }
+
+  onMouseLeave(event) {
+    const element = event.currentTarget
+    TweenMax.to(element, .3, { scale: 1 });
   }
 
   executeAnimation() {

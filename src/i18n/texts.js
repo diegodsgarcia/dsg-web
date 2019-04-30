@@ -49,4 +49,30 @@ const about = {
   ]
 }
 
-export { about };
+// ================== WORKS ======================
+const works = {
+  description: `Here is about a little about my job :).`,
+  jobs: [
+    {
+      title: 'Website Pousada Palos Verdes',
+      figure: '/images/palos-verdes.jpg',
+      link: 'https://palosverdes.com.br/'
+    },
+    {
+      title: 'Website FIAP',
+      figure: '/images/fiap.jpg',
+      link: 'https://www.fiap.com.br/online/',
+    },
+    {
+      title: 'Framework On-template',
+      figure: '',
+    },
+    {
+      title: 'Framework Sinqia',
+      figure: '',
+    }
+  ]
+}
+
+
+export { about, works };
