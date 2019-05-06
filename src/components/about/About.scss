@@ -24,4 +24,12 @@
 
 .skill__actually {
   margin: 0 10px;
+
+  &.--working {
+    color: rgb(0, 112, 28);
+  }
+
+  &.--not-working {
+    color: #ff0000;
+  }
 }

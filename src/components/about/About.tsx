@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import { TimelineMax } from 'gsap';
-import Utils from '../../utils/Utils';
+import { SectionProps, SectionState } from '../../model/Section';
 import { about } from '../../i18n/texts';
+import Utils from '../../utils/Utils';
 import Typing from '../typing/Typing';
 import './About.scss';
 
-class About extends Component {
-  state = {
-    canAnimate: false,
-    wasAnimate: false,
-  }
+class About extends Component<SectionProps, SectionState> {
   sectionName = 'section about';
   tl = new TimelineMax({ paused: true });
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      canAnimate: false,
+      wasAnimate: false,
+    }
+  }
 
   render() {
     return (
@@ -33,7 +39,7 @@ class About extends Component {
                   {skill.name}
                 </div>
                 <div className='skill__description'>
-                  <span className='skill__actually'>{skill.actually}</span>
+                  <span className={`skill__actually`}>{skill.actually}</span>
                   <span className='skill__rage'>{skill.rage}</span>
                 </div>
               </div>

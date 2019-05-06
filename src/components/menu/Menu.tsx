@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import { TimelineMax } from 'gsap/all';
+import { TimelineMax } from 'gsap';
 import './Menu.scss';
 
-class Menu extends Component {
+interface MenuProps {
+  close: Function,
+  navigateTo: Function,
+  visible: boolean
+}
+
+class Menu extends Component<MenuProps> {
   tl = new TimelineMax({ paused: true });
   elementRef;
 
   render() {
     return (
       <div className='menu' ref={div => this.elementRef = div} style={{ transform: 'translateX(-100vw)' }}>
-        <button className='menu__close' onClick={this.props.close}>
+        <button className='menu__close' onClick={this.props.close.bind(this)}>
           Close
         </button>
         <ul className='menu__list'>

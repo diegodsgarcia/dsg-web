@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { ScrollToPlugin } from 'gsap/all';
 import Section from './model/Section';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
@@ -8,17 +7,23 @@ import Works from './components/works/Works';
 import Contact from './components/contact/Contact';
 import './App.scss';
 
-// eslint-disable-next-line no-unused-vars
-const plugins = [ScrollToPlugin];
+type AppState = {
+  currentSection: HTMLElement | null,
+  stackSection: HTMLElement[]
+}
 
-class App extends Component {
+class App extends Component<any, AppState> {
 
-  state = {
-    currentSection: null,
-    stackSection: []
-  };
+  sections: any = [];
 
-  sections = [];
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentSection: null,
+      stackSection: []
+    };
+  }
 
   render() {
     return (
@@ -38,7 +43,7 @@ class App extends Component {
 
   findSections() {
     let sections = Array.from(document.querySelectorAll('.section'));
-    this.sections = sections.map(element => new Section(element));
+    this.sections = sections.map((element) => new Section(element as HTMLElement));
   }
 
   scrollEvent() {

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { TweenMax } from 'gsap/all';
+import { TweenMax } from 'gsap';
 import Menu from '../menu/Menu';
 import './Header.scss';
 
 
 class Header extends Component  {
+  menuRef;
   state = {
     visible: false
   }

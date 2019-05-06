@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import { TimelineMax, TweenMax } from 'gsap/all';
+import { SectionProps, SectionState } from '../../model/Section';
 import Utils from '../../utils/Utils';
 import Typing from '../typing/Typing';
 import { works } from '../../i18n/texts';
 import './Works.scss';
 
 
-class Works extends Component {
-
-  state = {
-    canAnimate: false,
-  }
+class Works extends Component<SectionProps, SectionState>  {
   sectionName = 'section works';
   tl = new TimelineMax({ paused: true });
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      canAnimate: false,
+      wasAnimate: false,
+    }
+  }
 
   render() {
     return (

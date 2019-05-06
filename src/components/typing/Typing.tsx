@@ -1,9 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, Children } from 'react'
 import { TimelineMax } from 'gsap'
 
-class Typing extends Component {
+type TypingProps = {
+  play: boolean,
+  element?,
+  children: any
+}
+
+class Typing extends Component<TypingProps> {
+  element;
+  tl: TimelineMax;
+
   constructor(props) {
-    super();
+    super(props);
     this.tl = new TimelineMax({ paused: true });
     this.element = null;
   }
@@ -17,7 +26,7 @@ class Typing extends Component {
   }
 
   componentDidMount() {
-    const text = this.props.children.trim().replace(/(\S+?)/g, '<span>$1</span>');
+    const text = this.props.children.toString().trim().replace(/(\S+?)/g, '<span>$1</span>');
     this.element.innerHTML = text;
     const spans = this.element.querySelectorAll('span');
 

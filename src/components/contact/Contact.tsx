@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import { TimelineMax } from 'gsap';
+import { SectionProps, SectionState } from '../../model/Section';
 import Utils from '../../utils/Utils';
 import Typing from '../typing/Typing';
 import './Contact.scss';
 
-class Contact extends Component {
-  state = {
-    canAnimate: false,
-    wasAnimate: false,
-  }
+class Contact extends Component<SectionProps, SectionState> {
   sectionName = 'section contact';
   tl = new TimelineMax({ paused: true });
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      canAnimate: false,
+      wasAnimate: false,
+    };
+  }
 
   render() {
     return (
