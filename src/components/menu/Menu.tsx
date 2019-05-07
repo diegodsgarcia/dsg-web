@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TimelineMax } from 'gsap';
+import { TweenMax } from 'gsap';
 import './Menu.scss';
 
 interface MenuProps {
@@ -9,12 +9,11 @@ interface MenuProps {
 }
 
 class Menu extends Component<MenuProps> {
-  tl = new TimelineMax({ paused: true });
   elementRef;
 
   render() {
     return (
-      <div className='menu' ref={div => this.elementRef = div} style={{ transform: 'translateX(-100vw)' }}>
+      <div className='menu' ref={div => this.elementRef = div}>
         <button className='menu__close' onClick={this.props.close.bind(this)}>
           Close
         </button>
@@ -34,20 +33,17 @@ class Menu extends Component<MenuProps> {
   }
 
   componentDidMount() {
-    this.tl
-      .to(this.elementRef, .4, { x: 0 })
-      .reversed(true)
-      .paused(false)
+    TweenMax.set(this.elementRef, { x: '-100%'});
   }
 
   componentDidUpdate() {
     if (this.props.visible) {
       document.body.style.overflow = 'hidden';
+      TweenMax.to(this.elementRef, .4, { x: '0%' })
     } else {
       document.body.style.overflow = 'visible';
+      TweenMax.to(this.elementRef, .4, { x: '-100%' })
     }
-
-    this.tl.reversed(!this.props.visible);
   }
 }
 
