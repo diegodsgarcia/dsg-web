@@ -85,7 +85,7 @@ const works = {
     },
     {
       title: 'Framework On-template',
-      figure: '',
+      figure: '/images/on-template.jpg',
     },
     {
       title: 'Framework Sinqia',

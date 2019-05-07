@@ -4,7 +4,6 @@ import Section from '../../model/Section';
 import Menu from '../menu/Menu';
 import './Header.scss';
 
-
 type HeaderProps = {
   currentSection: Section|null
 }

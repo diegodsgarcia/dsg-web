@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import Section from './model/Section';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
@@ -6,6 +7,9 @@ import About from './components/about/About';
 import Works from './components/works/Works';
 import Contact from './components/contact/Contact';
 import './App.scss';
+
+/* eslint no-unused-vars: 0 */
+const plugins = [ScrollToPlugin]
 
 type AppState = {
   currentSection: Section | null,
