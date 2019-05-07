@@ -1,51 +1,71 @@
 
 // ================== ABOUT ======================
 const about = {
-  description: `My name is Diego Garcia, I'm a web developer for 5 year ago. I love all about Javascript and Front-end My main robe is skateboarding and play
-  Path of Exile.`,
+  description: `My name is Diego Garcia, I'm a web developer for 5 year ago. I love all about Javascript and Front-end.`,
   skills: [
     {
       name: 'HTML5',
       icon: 'icon-html5',
-      actually: 'Working',
+      actually: {
+        text: 'Working',
+        color: 'green'
+      },
       rage: 'Advanced'
     },
     {
       name: 'CSS3',
       icon: 'icon-css3',
-      actually: 'Working',
+      actually: {
+        text: 'Working',
+        color: 'green'
+      },
       rage: 'Advanced'
     },
     {
       name: 'Javascript',
       icon: 'icon-javascript',
-      actually: 'Working',
+      actually: {
+        text: 'Working',
+        color: 'green'
+      },
       rage: 'Advanced'
     },
     {
       name: 'Angular',
       icon: 'icon-angular',
-      actually: 'Working',
+      actually: {
+        text: 'Working',
+        color: 'green'
+      },
       rage: 'Advanced'
+    },
+    {
+      name: 'Java',
+      icon: 'icon-java',
+      actually: {
+        text: 'Working',
+        color: 'green'
+      },
+      rage: 'Basic'
     },
     {
       name: 'React',
       icon: 'icon-react',
-      actually: 'Learning',
+      actually: {
+        text: 'Learning',
+        color: 'orange'
+      },
       rage: 'Basic'
     },
     {
       name: 'PHP',
       icon: 'icon-php',
-      actually: 'Not working',
+      actually: {
+        text: 'Not working',
+        color: 'red'
+      },
       rage: 'Normal'
-    },
-    {
-      name: 'Java',
-      icon: 'icon-java',
-      actually: 'Not working',
-      rage: 'Basic'
-    }     
+    },   
   ]
 }
 

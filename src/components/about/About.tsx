@@ -39,8 +39,12 @@ class About extends Component<SectionProps, SectionState> {
                   {skill.name}
                 </div>
                 <div className='skill__description'>
-                  <span className={`skill__actually`}>{skill.actually}</span>
-                  <span className='skill__rage'>{skill.rage}</span>
+                  <span className='skill__rage'>
+                    - {skill.rage} -
+                  </span> 
+                  <span className={`skill__actually`} style={{ color: skill.actually.color}}>
+                    {skill.actually.text}
+                  </span>
                 </div>
               </div>
             ))}
