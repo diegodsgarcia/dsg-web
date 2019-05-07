@@ -8,20 +8,20 @@ import Contact from './components/contact/Contact';
 import './App.scss';
 
 type AppState = {
-  currentSection: HTMLElement | null,
-  stackSection: HTMLElement[]
+  currentSection: Section | null,
+  stackSection: Section[]
 }
 
 class App extends Component<any, AppState> {
 
-  sections: any = [];
+  sections: Section[] = [];
 
   constructor(props) {
     super(props);
 
     this.state = {
       currentSection: null,
-      stackSection: []
+      stackSection: [],
     };
   }
 
@@ -29,7 +29,7 @@ class App extends Component<any, AppState> {
     return (
       <div className='App'>
         <Main />
-        <Header />
+        <Header currentSection={this.state.currentSection} />
         <About sections={this.state.stackSection} />
         <Works sections={this.state.stackSection} />
         <Contact sections={this.state.stackSection} />
@@ -43,7 +43,11 @@ class App extends Component<any, AppState> {
 
   findSections() {
     let sections = Array.from(document.querySelectorAll('.section'));
-    this.sections = sections.map((element) => new Section(element as HTMLElement));
+    this.sections = sections.map((element, i) => new Section(element as HTMLElement, this.checkIfIsDarkSection(i) ));
+  }
+
+  checkIfIsDarkSection(value: number): boolean {
+    return !Boolean(value & 1)
   }
 
   scrollEvent() {
@@ -51,7 +55,7 @@ class App extends Component<any, AppState> {
       this.findSections();
       const scrollTop = window.scrollY;
 
-      const foundSection = this.sections.find(section => {
+      const foundSection = this.sections.find((section: any) => {
         const elementTop = section.offsetTop;
         const elementBottom = elementTop + section.offsetHeight;
 
@@ -62,8 +66,11 @@ class App extends Component<any, AppState> {
         return false;
       });
 
+      if (!foundSection) {
+        return false;
+      }
+
       if (!this.state.currentSection) {
-        
         this.state.stackSection.push(foundSection);
         this.setState({ currentSection: foundSection});
         return;
@@ -73,7 +80,11 @@ class App extends Component<any, AppState> {
         if (!this.state.stackSection.find(section => section.className === foundSection.className)) {
           this.state.stackSection.push(foundSection);
         }
-        this.setState({ currentSection: foundSection});
+  
+        this.setState({ 
+          currentSection: foundSection, 
+          stackSection: this.state.stackSection,
+        });
       }
     })
   }

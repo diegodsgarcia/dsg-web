@@ -6,7 +6,7 @@ export type SectionState = {
 }
 
 export type SectionProps = {
-  sections: HTMLElement[];
+  sections: Section[];
 }
 
 export default class Section {
@@ -14,11 +14,13 @@ export default class Section {
   element: HTMLElement;
   offsetHeight: number;
   offsetTop: number;
+  isDark: boolean;
   
-  constructor(element: HTMLElement) {
+  constructor(element: HTMLElement, isDark: boolean) {
     this.className = element.className;
     this.element = element;
     this.offsetHeight = this.element.offsetHeight;
     this.offsetTop = this.element.offsetTop;
+    this.isDark = isDark;
   }
 }

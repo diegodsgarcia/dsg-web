@@ -5,7 +5,7 @@ import './Menu.scss';
 interface MenuProps {
   close: Function,
   navigateTo: Function,
-  visible: boolean
+  visible: boolean,
 }
 
 class Menu extends Component<MenuProps> {

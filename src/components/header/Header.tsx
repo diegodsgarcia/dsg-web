@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
 import { TweenMax } from 'gsap';
+import Section from '../../model/Section';
 import Menu from '../menu/Menu';
 import './Header.scss';
 
 
-class Header extends Component  {
+type HeaderProps = {
+  currentSection: Section|null
+}
+
+type HeaderState = {
+  visible: boolean,
+  isDark: boolean,
+}
+class Header extends Component<HeaderProps, HeaderState>  {
   menuRef;
-  state = {
-    visible: false
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false,
+      isDark: true,
+    }
   }
 
   setMenuVisible(visible) {
@@ -18,7 +32,7 @@ class Header extends Component  {
     return (
       <header className='header'>
         <div 
-          className='navigation__menu'
+          className={`navigation__menu ${this.state.isDark ? '--is-dark' : ''}`}
           onClick={this.setMenuVisible.bind(this, true)}>
         </div>
         <nav 
@@ -32,6 +46,10 @@ class Header extends Component  {
         </nav>
       </header>
   )}
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ isDark: nextProps.currentSection.isDark })
+  }
 
   navigateTo(event) {
     const route = event.currentTarget.href.replace('#', '.').match(/\.\w+/)[0];    
