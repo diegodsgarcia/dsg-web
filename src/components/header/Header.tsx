@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TweenMax } from 'gsap';
+import { TweenMax, TimelineMax } from 'gsap';
 import Section from '../../model/Section';
 import Menu from '../menu/Menu';
 import './Header.scss';
