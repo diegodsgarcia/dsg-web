@@ -11,15 +11,30 @@
 }
 
 .main__dsg {
+  position: relative;
+}
+
+.main__title {
   display: inline-block;
   font-size: 8em;
   letter-spacing: 5px;
-  border-right: 2px solid #ffffff;
 
   @media (min-width: 1000px) {
-    border-right-width: 10px;
     font-size: 15em;
     letter-spacing: 20px;
+  }
+}
+
+.main__cursor {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  right: -20px;
+  top: 0;
+  background-color: #ffffff;
+
+  @media (min-width: 1000px) {
+    width: 10px;
   }
 }
 
