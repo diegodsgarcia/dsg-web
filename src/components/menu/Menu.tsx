@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { TweenMax } from 'gsap';
 import './Menu.scss';
-import ScrollToPlugin from 'gsap/ScrollToPlugin';
-
-/* eslint no-unused-vars: 0 */
-const plugins = [ScrollToPlugin]
 
 interface MenuProps {
   close: Function,
