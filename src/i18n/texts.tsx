@@ -62,9 +62,9 @@ const about = {
       icon: 'icon-php',
       actually: {
         text: 'Not working',
-        color: 'red'
+        color: '#b1b1b1'
       },
-      rage: 'Normal'
+      rage: 'Advanced'
     },   
   ]
 }
