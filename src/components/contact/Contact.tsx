@@ -37,6 +37,9 @@ class Contact extends Component<SectionProps, SectionState> {
             <a title='Twitter' className='social__link icon-twitter' href='https://twitter.com/diegodsgarcia'>
               <span>Twitter</span>
             </a>
+            <a title='Github' className='social__link icon-github' href='https://github.com/diegodsgarcia/'>
+              <span>Github</span>
+            </a>
           </div>
         </div>
       </section>

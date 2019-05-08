@@ -22,6 +22,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-github:before {
+  content: "\e90a";
+  color: #000000;
+}
 .icon-java:before {
   content: "\e900";
   color: #007396;
