@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { TweenMax, TimelineMax } from 'gsap';
+import { TweenMax } from 'gsap';
 import Section from '../../model/Section';
 import Menu from '../menu/Menu';
 import './Header.scss';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+
+/* eslint no-unused-vars: 0 */
+const plugins = [ScrollToPlugin]
 
 type HeaderProps = {
   currentSection: Section|null
