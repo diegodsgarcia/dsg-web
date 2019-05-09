@@ -29,12 +29,12 @@ $acceleration: cubic-bezier(0, 0.77, 0.57, 1.02);
 
   .--open & {
     background-color: #ffffff;
-    box-shadow: 0 0 0 130vw #ffffff;
+    box-shadow: 0 0 0 200vw #ffffff;
   }
 
   .--open.--dark & {
     background-color: #000000;
-    box-shadow: 0 0 0 130vw #000000;
+    box-shadow: 0 0 0 200vw #000000;
   }
 }
 

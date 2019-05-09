@@ -47,7 +47,7 @@ class Works extends Component<SectionProps, any>  {
               </div>
             ))}
           </div>
-          <Modal
+          {/* <Modal
             ref={(el)=> this.modal = el} 
             title={this.state.jobSelected && this.state.jobSelected.title}
             description={this.state.jobSelected && this.state.jobSelected.description}
@@ -55,7 +55,7 @@ class Works extends Component<SectionProps, any>  {
             gallery={(this.state.jobSelected && this.state.jobSelected.gallery) || []}
             visible={this.state.modalIsOpen}
             closeModal={this.onCloseModal.bind(this)}
-          />
+          /> */}
         </div>
       </section>
     );
@@ -66,7 +66,7 @@ class Works extends Component<SectionProps, any>  {
       .staggerFrom('.works__job', .5, { scale: 0 }, .3)
       .set('.works__job', { clearProps: 'all'});
 
-    TweenMax.set(this.modal.refs.container, { y: '100vh'});
+    // TweenMax.set(this.modal.refs.container, { y: '100vh'});
   }
 
   componentWillReceiveProps(nextProps) {

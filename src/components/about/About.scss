@@ -7,6 +7,10 @@
   font-size: 1.4em;
   max-width: 360px;
   margin: 40px auto;
+
+  @media (max-width: 1000px) {
+    font-size: 1em;
+  }
 }
 
 .skill__item {

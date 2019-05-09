@@ -40,5 +40,9 @@ html, body, .App, #root {
   text-align: center;
   font-size: 1.6em;
   padding: 0 5px;
+
+  @media (max-width: 1000px) {
+    font-size: 1em;
+  }
 }
 
