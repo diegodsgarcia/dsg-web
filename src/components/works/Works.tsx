@@ -90,7 +90,7 @@ class Works extends Component<SectionProps, any>  {
   }
 
   onOpenModal(job) {
-    this.setState({ modalIsOpen: true, jobSelected: job });
+    // this.setState({ modalIsOpen: true, jobSelected: job });
   }
 
   onCloseModal() {

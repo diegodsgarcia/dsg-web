@@ -31,17 +31,21 @@ class Header extends Component<HeaderProps, HeaderState>  {
     return (
       <header className='header'>
         <div 
-          className={`navigation__menu ${this.state.isDark ? '--is-dark' : ''}`}
-          onClick={this.setMenuVisible.bind(this, true)}>
+          className={`navigation__menu ${this.state.isDark && '--dark'} ${this.state.visible && '--open'}`}
+          onClick={this.setMenuVisible.bind(this, !this.state.visible)}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <nav 
           className='navigation'
           ref={this.menuRef}>
-            <Menu 
-              visible={this.state.visible}
-              close={this.setMenuVisible.bind(this, false)}
+            <Menu
+              isDark={!this.state.isDark} 
+              visible={this.state.visible} 
               navigateTo={this.navigateTo.bind(this)}
-              /> 
+            /> 
         </nav>
       </header>
   )}

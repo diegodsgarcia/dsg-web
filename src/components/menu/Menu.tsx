@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { TweenMax } from 'gsap';
 import './Menu.scss';
 
 interface MenuProps {
-  close: Function,
+  isDark: boolean,
   visible: boolean,
   navigateTo
 }
@@ -13,10 +12,8 @@ class Menu extends Component<MenuProps> {
 
   render() {
     return (
-      <div className='menu' ref={div => this.elementRef = div}>
-        <button className='menu__close' onClick={this.props.close.bind(this)}>
-          Close
-        </button>
+      <div className={`menu ${this.props.visible && '--open'} ${this.props.isDark && '--dark'}`} ref={div => this.elementRef = div}>
+        <div className="menu__background"></div>
         <ul className='menu__list'>
           <li className='menu__item'>
             <a className='menu__link' href="#about" onClick={this.props.navigateTo}>About</a>
@@ -32,17 +29,11 @@ class Menu extends Component<MenuProps> {
     )
   }
 
-  componentDidMount() {
-    TweenMax.set(this.elementRef, { x: '-100%'});
-  }
-
   componentDidUpdate() {
     if (this.props.visible) {
       document.body.style.overflow = 'hidden';
-      TweenMax.to(this.elementRef, .4, { x: '0%' })
     } else {
       document.body.style.overflow = 'visible';
-      TweenMax.to(this.elementRef, .4, { x: '-100%' })
     }
   }
 }

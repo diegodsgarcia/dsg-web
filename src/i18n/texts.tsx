@@ -108,18 +108,18 @@ const works = {
       ],
       tecnology: ['Angular'],
     },
-    {
-      title: 'Framework Sinqia ',
-      company: 'Sinqia',
-      figure: 'sinqia.jpg',
-      gallery: [
-        'sinqia.jpg',
-        'sinqia.jpg',
-        'sinqia.jpg',
-      ],
-      tecnology: ['Angular'],
+    // {
+    //   title: 'Framework Sinqia ',
+    //   company: 'Sinqia',
+    //   figure: 'sinqia.jpg',
+    //   gallery: [
+    //     'sinqia.jpg',
+    //     'sinqia.jpg',
+    //     'sinqia.jpg',
+    //   ],
+    //   tecnology: ['Angular'],
       
-    }
+    // }
   ]
 }
 

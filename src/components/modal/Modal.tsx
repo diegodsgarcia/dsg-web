@@ -19,7 +19,6 @@ class Modal extends Component<ModalProps, any> {
   render() {
     return (
       <div className='modal' ref='container'>
-    
           <button className='modal__close' onClick={this.onCloseModal.bind(this)}>Close</button>
           <h1 className='modal__title'>{this.props.title}</h1>
           <div className="modal__gallery">
