@@ -75,21 +75,50 @@ const works = {
   jobs: [
     {
       title: 'Website Pousada Palos Verdes',
-      figure: '/images/palos-verdes.jpg',
-      link: 'https://palosverdes.com.br/'
+      company: 'Pousada Palos Verdes',
+      figure: 'palos-verdes.jpg',
+      gallery: [
+        'palos-verdes.jpg',
+        'palos-verdes.jpg',
+        'palos-verdes.jpg',
+      ],
+      link: 'https://palosverdes.com.br/',
+      tecnology: ['Wordpress']
     },
     {
       title: 'Website FIAP',
-      figure: '/images/fiap.jpg',
+      company: 'FIAP',
+      figure: 'fiap.jpg',
+      gallery: [
+        'fiap.jpg',
+        'fiap.jpg',
+        'fiap.jpg',
+      ],
       link: 'https://www.fiap.com.br/online/',
+      tecnology: ['Wordpress'],
     },
     {
       title: 'Framework On-template',
-      figure: '/images/on-template.jpg',
+      company: 'FIAP',
+      figure: 'on-template.jpg',
+      gallery: [
+        'on-template.jpg',
+        'on-template.jpg',
+        'on-template.jpg',
+      ],
+      tecnology: ['Angular'],
     },
     {
-      title: 'Framework Sinqia',
-      figure: '',
+      title: 'Framework Sinqia ',
+      company: 'Sinqia',
+      figure: 'sinqia.jpg',
+      gallery: [
+        'sinqia.jpg',
+        'sinqia.jpg',
+        'sinqia.jpg',
+      ],
+      tecnology: ['Angular'],
+      
     }
   ]
 }
