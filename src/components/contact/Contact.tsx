@@ -31,13 +31,13 @@ class Contact extends Component<SectionProps, SectionState> {
             <a title='G-mail' className='social__link icon-gmail' href='mailto:diego.ds.garcia@gmail.com'>
               <span>G-mail</span>
             </a>
-            <a title='Instagram' className='social__link icon-instagram' href='https://www.instagram.com/diegodsgarcia/'>
+            <a title='Instagram' className='social__link icon-instagram' href='https://www.instagram.com/diegodsgarcia/' target='_blank'>
               <span>Instagram</span>
             </a>
-            <a title='Twitter' className='social__link icon-twitter' href='https://twitter.com/diegodsgarcia'>
+            <a title='Twitter' className='social__link icon-twitter' href='https://twitter.com/diegodsgarcia' target='_blank'>
               <span>Twitter</span>
             </a>
-            <a title='Github' className='social__link icon-github' href='https://github.com/diegodsgarcia/'>
+            <a title='Github' className='social__link icon-github' href='https://github.com/diegodsgarcia/' target='_blank'>
               <span>Github</span>
             </a>
           </div>

@@ -56,10 +56,8 @@ class Header extends Component<HeaderProps, HeaderState>  {
   }
 
   navigateTo(event) {
-    const route = event.currentTarget.href.replace('#', '.').match(/\.\w+/)[0];    
+    const route = event.currentTarget.href.replace('#', '.').match(/\/(\.\w+)/)[1];
     this.setState({ visible: false });
-    console.log(route);
-    console.log(document.querySelector(route));
     Utils.scrollTo(document.querySelector(route), 1250);
   }
 }
