@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TimelineMax, TweenMax, SteppedEase } from 'gsap';
+import Utils from '../../utils/Utils';
 import './Main.scss';
 
 class Main extends Component {
@@ -45,7 +46,7 @@ class Main extends Component {
   }
 
   scrollDown() {
-    TweenMax.to(window, .8, {scrollTo: `.about`});
+    Utils.scrollTo(document.querySelector('.about'), 1250);
   }
 }
 

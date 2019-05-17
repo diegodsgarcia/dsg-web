@@ -3,6 +3,7 @@ import { TweenMax } from 'gsap';
 import Section from '../../model/Section';
 import Menu from '../menu/Menu';
 import './Header.scss';
+import Utils from '../../utils/Utils';
 
 type HeaderProps = {
   currentSection: Section|null
@@ -57,7 +58,8 @@ class Header extends Component<HeaderProps, HeaderState>  {
   navigateTo(event) {
     const route = event.currentTarget.href.replace('#', '.').match(/\.\w+/)[0];    
     this.setState({ visible: false });
-    TweenMax.to(window, .8, {scrollTo: `${route}`});
+    Utils.scrollTo(document.querySelector(route), 1250);
+    console.log(document.querySelector(route));
   }
 }
 
