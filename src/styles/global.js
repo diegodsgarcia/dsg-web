@@ -54,17 +54,20 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background: var(--background);
-    line-height: 1;
-    font-size: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+    line-height: 1;
+  }
+  main {
+    padding-top: 80px;
+    min-height: 100vh;
   }
   img {
     display: block;
     width: 100%;
     height: auto;
   }
-
   body {
     --background: #000;
     --text: #fff;

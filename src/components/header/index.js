@@ -6,16 +6,16 @@ const Header = () => (
     <S.Nav>
       <ul>
         <li>
-          <S.Link to="/">Home</S.Link>
+          <S.Link activeClassName="active" to="/">Home</S.Link>
         </li>
         <li>
-          <S.Link to="/about">About me</S.Link>
+          <S.Link activeClassName="active" to="/about">About me</S.Link>
         </li>
         <li>
-          <S.Link to="/works">Works</S.Link>
+          <S.Link activeClassName="active" to="/works">Works</S.Link>
         </li>
         <li>
-          <S.Link to="/articles">Articles</S.Link>
+          <S.Link activeClassName="active" to="/articles">Articles</S.Link>
         </li>
       </ul>
     </S.Nav>
