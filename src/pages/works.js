@@ -8,33 +8,25 @@ import Gallery from '../components/gallery'
 import * as S from '../components/container/styled'
 
 function WorksPage() {
-  const images = useStaticQuery(
+  const datas = useStaticQuery(
     graphql`
-      query {
-        fiap: file(relativePath: { eq: "fiap.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1020) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-        onTemplate: file(relativePath: { eq: "on-template.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1020) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-        palosVerdes: file(relativePath: { eq: "palos-verdes.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1020) {
-              ...GatsbyImageSharpFluid_tracedSVG
+    {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/works/"}}) {
+        edges {
+          node {
+            frontmatter {
+              thumbnail
+              title
+              tags
+              slug
             }
           }
         }
       }
-    `
-  )
+    }
+  `)
+
+  const works = datas.allMarkdownRemark.edges.map(edge => edge.node.frontmatter)
 
   return (
     <Layout>
@@ -44,7 +36,13 @@ function WorksPage() {
         <p>
           Here is about a little about my job :).
         </p>
-        <Gallery figures={Object.values(images).map(image => image.childImageSharp.fluid)} />
+        {works.map((work, i) =>
+          <> 
+            <p key={i}>{work.title}</p>
+            <img src={work.thumbnail} />  
+          </>
+        )}
+        {/* <Gallery figures={Object.values(images).map(image => image.childImageSharp.fluid)} /> */}
       </S.Container>
     </Layout>
   )

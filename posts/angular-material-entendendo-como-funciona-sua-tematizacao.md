@@ -1,4 +1,8 @@
-#Angular Material - Entendendo como funciona sua tematização
+---
+title: " Angular Material - Entendendo como funciona sua tematização"
+---
+
+# Angular Material - Entendendo como funciona sua tematização
 
 Se você já desenvolve em Angular, com certeza já ouviu falar do framework Angular Material. Nesse artigo vamos explorar e descobrir mais como funciona os padrões de tematização no SASS e criar nossos próprios componentes tematizados!
 Um pouco sobre as definições e padrões:
