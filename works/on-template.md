@@ -1,10 +1,10 @@
 ---
 title: 'On Template'
 thumbnail: '/assets/images/works/on-template.jpg'
-color: '#B31917'
-slug: 'on-template'
+description: 'Lorem ipsum dolor'
+date: '2018-01-01'
+company: 'FIAP'
+slug: 'works/on-template'
 tags:
 - Angular
 ---
-
-# On Template

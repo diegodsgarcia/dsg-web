@@ -1,18 +1,35 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import media from 'styled-media-query'
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-areas: minmax(auto, 1fr);
-  grid-template-columns: 1fr 1fr 1fr ;
   grid-gap: 1rem;
-  margin: .5rem 0 ;
+  margin: .5rem 0;
+
+  figure {
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: .4s background-color;
+    }
+
+    &:hover:after {
+
+      background-color: #000;
+    }
+  }
 `
 
-const Image = styled(Img)`
+const Image = styled.img`
+
   width: 100%;
-  height: 300px;
   background-color: #fff;
+  margin: 1rem 0;
 `
 
 export { Wrapper, Image }

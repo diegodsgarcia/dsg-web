@@ -1,13 +1,18 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 const Container = styled.section`
-  width: 1020px;
+  width: 768px;
   min-height: calc(100vh - 80px);
   margin: 0 auto 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
 
   h1 {
     margin: 1rem 0;

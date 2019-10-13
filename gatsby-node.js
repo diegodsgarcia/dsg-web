@@ -6,6 +6,10 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
           node {
             frontmatter {
               title
+              thumbnail
+              description
+              date
+              company
               tags
               slug
             }
@@ -20,7 +24,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
     const context = edge.node.frontmatter
 
     createPage({
-      path: `works/${slug}/`,
+      path: `/${slug}/`,
       component: require.resolve('./src/templates/work-page.js'),
       context,
     })

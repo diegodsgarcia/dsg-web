@@ -27,6 +27,8 @@ function WorksPage() {
   `)
 
   const works = datas.allMarkdownRemark.edges.map(edge => edge.node.frontmatter)
+  const figures = works.map(({thumbnail}) => thumbnail)
+  const slugs = works.map(({slug}) => slug)
 
   return (
     <Layout>
@@ -36,13 +38,7 @@ function WorksPage() {
         <p>
           Here is about a little about my job :).
         </p>
-        {works.map((work, i) =>
-          <> 
-            <p key={i}>{work.title}</p>
-            <img src={work.thumbnail} />  
-          </>
-        )}
-        {/* <Gallery figures={Object.values(images).map(image => image.childImageSharp.fluid)} /> */}
+        <Gallery figures={figures} slugs={slugs} />
       </S.Container>
     </Layout>
   )
