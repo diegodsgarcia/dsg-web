@@ -5,8 +5,8 @@ description: 'Lorem ipsum dolor'
 date: '2018-01-01'
 company: 'FIAP'
 slug: 'works/palos-verdes'
-tags:
-- wordpress
+technologies:
+- Wordpress
 - Greensock
 - Twig
 ---

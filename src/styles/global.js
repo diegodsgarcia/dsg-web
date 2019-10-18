@@ -70,7 +70,8 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     --background: #000;
-    --text: #fff;
+    --title: #fff;
+    --text: #bfbfbf;
   }
 `
 

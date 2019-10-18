@@ -19,7 +19,6 @@ const Wrapper = styled.div`
     }
 
     &:hover:after {
-
       background-color: #000;
     }
   }

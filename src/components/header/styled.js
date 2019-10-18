@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import { Link as GatsbyLink } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const Header = styled.header`
   position: fixed;
   width: 100%;
   height: 80px;
   background-color: var(--background);
+  z-index: 3;
 `
 
 const Nav = styled.nav`
@@ -23,7 +24,7 @@ const Nav = styled.nav`
   }
 `
 
-const Link = styled(GatsbyLink)`
+const Link = styled(AniLink)`
   text-decoration: none;
   font-size: 1.4rem;
   color: var(--text);

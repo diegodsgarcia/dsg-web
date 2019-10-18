@@ -6,16 +6,31 @@ const Header = () => (
     <S.Nav>
       <ul>
         <li>
-          <S.Link activeClassName="active" to="/">Home</S.Link>
+          <S.Link
+            fade 
+            duration={0.6} 
+            activeClassName="active" 
+            to="/">
+              Home
+          </S.Link>
         </li>
         <li>
-          <S.Link activeClassName="active" to="/about">About me</S.Link>
+          <S.Link 
+            fade 
+            duration={0.6} 
+            activeClassName="active" 
+            to="/about">
+              About me
+          </S.Link>
         </li>
         <li>
-          <S.Link activeClassName="active" to="/works">Works</S.Link>
-        </li>
-        <li>
-          <S.Link activeClassName="active" to="/articles">Articles</S.Link>
+          <S.Link 
+            fade 
+            duration={0.6} 
+            activeClassName="active" 
+            to="/works">
+              Works
+          </S.Link>
         </li>
       </ul>
     </S.Nav>

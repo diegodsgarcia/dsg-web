@@ -1,5 +1,6 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useEffect } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { TimelineMax } from 'gsap'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -17,7 +18,6 @@ function WorksPage() {
             frontmatter {
               thumbnail
               title
-              tags
               slug
             }
           }
@@ -29,6 +29,12 @@ function WorksPage() {
   const works = datas.allMarkdownRemark.edges.map(edge => edge.node.frontmatter)
   const figures = works.map(({thumbnail}) => thumbnail)
   const slugs = works.map(({slug}) => slug)
+
+  useEffect(() => {
+    new TimelineMax()
+      .staggerFromTo('h1, p', 1, { opacity: 0 }, { opacity: 1}, .5)
+      .staggerFromTo('figure', .5, { scale: 0 }, { scale: 1}, .5)
+  }, [])
 
   return (
     <Layout>

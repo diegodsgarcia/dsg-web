@@ -10,7 +10,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
               description
               date
               company
-              tags
+              technologies
               slug
             }
           }
