@@ -1,9 +1,9 @@
 ---
 title: 'Palos Verdes'
 thumbnail: '/assets/images/works/palos-verdes.jpg'
-description: 'Lorem ipsum dolor'
-date: '2018-01-01'
-company: 'FIAP'
+description: 'The website of hotel Pousada Palos Verdes a zero template was created, all designed with the client.'
+date: '2018-08-01'
+company: 'Pousada Palos Verdes'
 slug: 'works/palos-verdes'
 technologies:
 - Wordpress

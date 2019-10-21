@@ -15,17 +15,16 @@ const Wrapper = styled.div`
       height: 100%;
       top: 0;
       left: 0;
-      transition: .4s background-color;
+      /* transition: .4s background-color; */
     }
 
-    &:hover:after {
+    /* &:hover:after {
       background-color: #000;
-    }
+    } */
   }
 `
 
 const Image = styled.img`
-
   width: 100%;
   background-color: #fff;
   margin: 1rem 0;

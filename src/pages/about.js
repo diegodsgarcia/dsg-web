@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+
+import { TimelineMax } from 'gsap'
 
 import { Github } from 'styled-icons/boxicons-logos/Github'
 import { LinkedinSquare  } from 'styled-icons/boxicons-logos/LinkedinSquare'
@@ -10,15 +12,24 @@ import { Email } from 'styled-icons/material/Email'
 
 import * as S from '../components/container/styled'
 
-const AboutPage = () => (
+function AboutPage() {
+
+  useEffect(() => {
+    new TimelineMax()
+      .from('h1, p', 1, { opacity: 0 })
+      .staggerFromTo('.list li', 1, { opacity: 0 }, { opacity: 1}, .2)
+      .from('.social-links', 1, { opacity: 0 })
+  }, [])
+
+  return (
   <Layout>
     <SEO title="About me" />
     <S.Container>
       <h1>About me</h1>
-      <p>
-        My name is Diego Garcia, I'm a web developer for 5 year ago. I love all about Javascript and Front-end.
+      <p className="description">
+        My name is Diego Garcia, I'm a web developer for 5 year ago. I love all about Javascript and Front-end. My main skills:
       </p>
-      <ul>
+      <ul className="list">
         <li>
           HTML5
         </li>
@@ -26,7 +37,7 @@ const AboutPage = () => (
           CSS3
         </li>
         <li>
-          Javascript
+          JavaScript
         </li>
         <li>
           NodeJS
@@ -54,6 +65,7 @@ const AboutPage = () => (
       </nav>
     </S.Container>
   </Layout>
-)
+  )
+}
 
 export default AboutPage

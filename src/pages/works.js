@@ -32,7 +32,7 @@ function WorksPage() {
 
   useEffect(() => {
     new TimelineMax()
-      .staggerFromTo('h1, p', 1, { opacity: 0 }, { opacity: 1}, .5)
+      .staggerFromTo('h1, p', 1, { opacity: 0 }, { opacity: 1}, .2)
       .staggerFromTo('figure', .5, { scale: 0 }, { scale: 1}, .5)
   }, [])
 
@@ -42,7 +42,7 @@ function WorksPage() {
       <S.Container>
         <h1>Works</h1>
         <p>
-          Here is about a little about my job :).
+          Here is about a little about my jobs :).
         </p>
         <Gallery figures={figures} slugs={slugs} />
       </S.Container>

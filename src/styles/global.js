@@ -72,6 +72,7 @@ const GlobalStyles = createGlobalStyle`
     --background: #000;
     --title: #fff;
     --text: #bfbfbf;
+    --textHover: #fff;
   }
 `
 

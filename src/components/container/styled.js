@@ -53,7 +53,34 @@ const Container = styled.section`
 
     a {
       color: var(--text);
+      
+      svg {
+        transition: 0.2s fill;
+      }
+
+      &:hover svg {
+        fill: var(--textHover);
+      }
     }
+  }
+
+  .list {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: block;
+    list-style: inside;
+    min-width: 10%;
+    margin: 0.8rem auto;
+
+    > li {
+      
+      text-align: left;
+     
+    }
+  }
+
+  .description {
+    line-height: 1.5rem;
   }
 `
 

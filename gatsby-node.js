@@ -8,7 +8,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
               title
               thumbnail
               description
-              date
+              date(formatString: "MMMM, YYYY")
               company
               technologies
               slug
