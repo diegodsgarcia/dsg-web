@@ -68,11 +68,24 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: auto;
   }
-  body {
+  body.dark {
     --background: #000;
     --title: #fff;
     --text: #bfbfbf;
     --textHover: #fff;
+    --nav: #fff;
+    --figureHover: #000000b3;
+    --themeButton: #fff;
+  }
+
+  body.light {
+    --background: #fff;
+    --title: #000;
+    --text: #717171;
+    --textHover: #000;
+    --nav: #000;
+    --figureHover: #ffffffb3;
+    --themeButton: #000;
   }
 `
 

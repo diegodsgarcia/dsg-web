@@ -1,4 +1,7 @@
-import React, {useEffect } from 'react'
+import React, { useEffect } from 'react'
+
+import { isDarkTheme } from '../../utils/theme'
+
 import * as S from './styled'
 
 function Canvas() {
@@ -80,13 +83,15 @@ function executeCanvas() {
       initializeStars();
     }
     if(warp==0) {
-      c.fillStyle = "rgba(0,0,0,1)";
+      const backgroundColor = isDarkTheme() ? 'rgba(0,0,0,1)' : 'rgba(255,255,255,1)';
+      c.fillStyle = backgroundColor;
       c.fillRect(0,0, canvas.width, canvas.height);
     }
       c.fillStyle = `rgba(209, 255, 255, ${radius})`;
       
     for(i = 0; i < numStars; i++){
       star = stars[i];
+      const starColor = isDarkTheme() ? `rgba(209, 255, 255, ${star.o})` : `rgba(0, 0, 0, ${star.o})`;
       
       pixelX = (star.x - centerX) * (focalLength / star.z);
       pixelX += centerX;
@@ -95,7 +100,7 @@ function executeCanvas() {
       pixelRadius = 1 * (focalLength / star.z);
       
       c.fillRect(pixelX, pixelY, pixelRadius, pixelRadius);
-      c.fillStyle = `rgba(209, 255, 255, ${star.o})`;
+      c.fillStyle = starColor;
     }
   }
 

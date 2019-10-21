@@ -18,6 +18,7 @@ const Container = styled.section`
   h1 {
     margin: 1rem 0;
     font-size: 2rem;
+    color: var(--title);
   }
 
   p {
@@ -66,8 +67,6 @@ const Container = styled.section`
   }
 
   .list {
-    /* display: flex;
-    flex-wrap: wrap; */
     display: block;
     list-style: inside;
     min-width: 10%;
@@ -82,6 +81,7 @@ const Container = styled.section`
 
   .description {
     line-height: 1.5rem;
+    color: var(--text);
 
     ${media.lessThan('medium')`
       margin: 0.5rem;

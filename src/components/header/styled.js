@@ -27,7 +27,7 @@ const Nav = styled.nav`
 const Link = styled(AniLink)`
   text-decoration: none;
   font-size: 1.4rem;
-  color: var(--text);
+  color: var(--nav);
   opacity: .5;
   transition: .2s opacity;
 

@@ -19,7 +19,7 @@ const Wrapper = styled.div`
       left: 0;
       transition: 0.4s transform;
       transform: scale(0);
-      background-color: #000000b3;
+      background-color: var(--figureHover);
       border: 0;
     }
 
@@ -50,7 +50,7 @@ const Figcaption = styled.figcaption`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: var(--title);
   font-size: 2.5rem;
   z-index: 1;
   opacity: 0;
