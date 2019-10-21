@@ -29,6 +29,7 @@ function WorksPage() {
   const works = datas.allMarkdownRemark.edges.map(edge => edge.node.frontmatter)
   const figures = works.map(({thumbnail}) => thumbnail)
   const slugs = works.map(({slug}) => slug)
+  const titles = works.map(({title}) => title)
 
   useEffect(() => {
     new TimelineMax()
@@ -44,7 +45,7 @@ function WorksPage() {
         <p>
           Here is about a little about my jobs :).
         </p>
-        <Gallery figures={figures} slugs={slugs} />
+        <Gallery figures={figures} slugs={slugs} titles={titles} />
       </S.Container>
     </Layout>
   )

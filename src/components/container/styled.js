@@ -2,13 +2,14 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 const Container = styled.section`
+  position: relative;
   width: 768px;
   min-height: calc(100vh - 80px);
   margin: 0 auto 0;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;  
 
   ${media.lessThan('medium')`
     width: 100%;
@@ -81,6 +82,10 @@ const Container = styled.section`
 
   .description {
     line-height: 1.5rem;
+
+    ${media.lessThan('medium')`
+      margin: 0.5rem;
+    `}
   }
 `
 
