@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 const Wrapper = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
   text-align: center;
   
   h1 {
