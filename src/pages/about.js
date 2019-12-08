@@ -57,9 +57,9 @@ function AboutPage() {
       </ul>
       <nav className="social-links">
         <ul>
-          <li><a href="https://github.com/diegodsgarcia" target="_blank" rel="noopener norefferer"><Github /></a></li>
-          <li><a href="https://www.linkedin.com/in/diegodsgarcia/" target="_blank" rel="noopener norefferer"><LinkedinSquare /></a></li>
-          <li><a href="https://www.instagram.com/diegodsgarcia/" target="_blank" rel="noopener norefferer"><Instagram /></a></li>
+          <li><a href="https://github.com/diegodsgarcia"><Github /></a></li>
+          <li><a href="https://www.linkedin.com/in/diegodsgarcia/"><LinkedinSquare /></a></li>
+          <li><a href="https://www.instagram.com/diegodsgarcia/"><Instagram /></a></li>
           <li><a href="mailto:diego.ds.garcia@gmail.com"><Email /></a></li>
         </ul>
       </nav>
