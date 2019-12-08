@@ -1,5 +1,5 @@
 exports.createPages = async ({actions: { createPage }, graphql }) => {
-  const { data } = await graphql(`
+  const works = await graphql(`
     {
       allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/works/"}}) {
         edges {
@@ -19,13 +19,42 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
     }
   `)
 
-  data.allMarkdownRemark.edges.forEach(edge => {
+  const posts = await graphql(`
+    {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              thumbnail
+              description
+              date(formatString: "MMMM, YYYY")
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  
+  works.data.allMarkdownRemark.edges.forEach(edge => {
     const slug = edge.node.frontmatter.slug
     const context = edge.node.frontmatter
 
     createPage({
       path: `/${slug}/`,
       component: require.resolve('./src/templates/work-page.js'),
+      context,
+    })
+  })
+
+  posts.data.allMarkdownRemark.edges.forEach(edge => {
+    const slug = edge.node.frontmatter.slug
+    const context = edge.node.frontmatter
+
+    createPage({
+      path: `/${slug}/`,
+      component: require.resolve('./src/templates/post-page.js'),
       context,
     })
   })

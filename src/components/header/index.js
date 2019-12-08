@@ -32,6 +32,15 @@ const Header = () => (
               Works
           </S.Link>
         </li>
+        <li>
+          <S.Link 
+            fade 
+            duration={0.6} 
+            activeClassName="active" 
+            to="/articles">
+              Articles
+          </S.Link>
+        </li>
       </ul>
     </S.Nav>
   </S.Header>

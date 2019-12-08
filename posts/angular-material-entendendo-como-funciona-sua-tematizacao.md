@@ -1,5 +1,8 @@
 ---
-title: " Angular Material - Entendendo como funciona sua tematização"
+title: 'Angular Material - Entendendo como funciona sua tematização'
+thumbnail: '/assets/images/posts/angular-material.png'
+description: 'I worked as a Front end developer in a FIAP. The main project was to implement a redesign of site with a more 2 devs.'
+slug: 'posts/angular-material-entendendo-como-funciona-sua-tematização'
 ---
 
 # Angular Material - Entendendo como funciona sua tematização
