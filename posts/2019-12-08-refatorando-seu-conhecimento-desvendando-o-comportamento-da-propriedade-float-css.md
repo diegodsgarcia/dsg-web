@@ -7,6 +7,7 @@ description: >-
   das propriedades mais básicas, porem você realmente sabe seu comportamento?
 date: '2018-02-20 08:05:45'
 thumbnail: /assets/images/posts/float-example-default.png
+locale: br
 ---
 A propriedade _float_ está desde os primórdios da web e ela é considerada uma das propriedades mais básicas, porem você realmente sabe seu comportamento?
 
@@ -24,10 +25,12 @@ Criei um exemplo bem simples [(link do código no github](https://github.com/die
 
 Bom até aí beleza! Com a leitura do artigo [**“All about float”**](https://css-tricks.com/all-about-floats/) (a qual eu super recomendo você também ler) está tudo certo!! Então eu cheguei na seguinte conclusão.
 
-**_Todos elementos inline vão respeitar o fluxo do elemento float._**
+_**Todos elementos inline vão respeitar o fluxo do elemento float.**_
 
 Então criei uma div no meio do fluxo de um elemento float para testar os seus vários tipos de comportamento, e verificar se minha teoria está correta.
 
 ## DISPLAY BLOCK
+
+![]()
 
 Beleza por enquanto minha teoria esta certa! O elemento div não flutuo. O que apenas seguiu o fluxo foi o conteúdo dentro, seguindo ainda minha teoria dos elementos inline.
