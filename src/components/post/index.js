@@ -1,10 +1,10 @@
 import React from 'react'
 import * as S from './styled'
 
-const Post = (({title, thumbnail, date, children }) => (
+const Post = (({title, date, children }) => (
   <S.Wrapper>
     <S.Title>{title}</S.Title>
-    <time>{date}</time>
+    <S.Time>{date}</S.Time>
     <S.Article>
       {children}
     </S.Article>

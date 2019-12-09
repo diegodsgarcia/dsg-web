@@ -7,8 +7,6 @@ import Post from '../components/post'
 function PostPage({ pageContext }) {
   const { title, thumbnail, description, date, html } = pageContext
 
-  console.log(html)
-
   return (
     <Layout>
       <SEO title="Posts" />
