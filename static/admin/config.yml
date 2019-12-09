@@ -2,7 +2,6 @@ backend:
   name: github
   repo: diegodsgarcia/dsg-web
   branch: master
-  site_domain: https://dsg.net.br/
 
 publish_mode: editorial_workflow
 media_folder: static/assets/images/posts
