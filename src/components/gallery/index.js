@@ -12,8 +12,9 @@ function Gallery({figures, slugs, titles}) {
         {figures.map((img, i) => (
           <AniLink 
             key={i} 
-            paintDrip 
-            hex={getThemeColor()}
+            cover
+            direction="up" 
+            bg={getThemeColor()}
             to={`/${slugs[i]}`}>
             <figure>
               <S.Image src={img}>
