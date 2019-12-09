@@ -5,9 +5,10 @@ title: >-
 description: >-
   A propriedade float está desde os primórdios da web e ela é considerada uma
   das propriedades mais básicas, porem você realmente sabe seu comportamento?
+slug: >-
+  posts/refatorando-seu-conhecimento-desvendando-o-comportamento-da-propriedade-float-css
 date: '2018-02-20 08:05:45'
-slug: 'posts/refatorando-seu-conhecimento-desvendando-o-comportamento-da-propriedade-float-css'
-thumbnail: /assets/images/posts/float-example-default.png
+thumbnail: /assets/images/posts/float-css.png
 locale: br
 ---
 
