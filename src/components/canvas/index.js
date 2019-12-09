@@ -77,12 +77,12 @@ function executeCanvas() {
     let pixelX, pixelY, pixelRadius;
     
     // Resize to the screen
-    if(canvas.width != window.innerWidth || canvas.width != window.innerWidth){
+    if(canvas.width !== window.innerWidth || canvas.width !== window.innerWidth){
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       initializeStars();
     }
-    if(warp==0) {
+    if(warp === 0) {
       const backgroundColor = isDarkTheme() ? 'rgba(0,0,0,1)' : 'rgba(255,255,255,1)';
       c.fillStyle = backgroundColor;
       c.fillRect(0,0, canvas.width, canvas.height);

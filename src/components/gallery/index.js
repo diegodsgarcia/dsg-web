@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React  from 'react'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import { getThemeColor } from '../../utils/theme'
@@ -6,13 +6,6 @@ import { getThemeColor } from '../../utils/theme'
 import * as S from './styled'
 
 function Gallery({figures, slugs, titles}) {
-
-  function onMouseEnter(i) {
-  }
-
-  function onMouseLeave(i) {
-  }
-
   return (
     <>
       <S.Wrapper>
@@ -22,7 +15,7 @@ function Gallery({figures, slugs, titles}) {
             paintDrip 
             hex={getThemeColor()}
             to={`/${slugs[i]}`}>
-            <figure  onMouseEnter={onMouseEnter.bind(this, i)} onMouseLeave={onMouseLeave.bind(this, i)}>
+            <figure>
               <S.Image src={img}>
               </S.Image>
               <S.Figcaption>
