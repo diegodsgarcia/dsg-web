@@ -17,6 +17,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
       - {label: "Image", name: "thumbnail", widget: "image"}
       - {label: "Locale", name: "locale", widget: "select", options: ["br", "en"]}

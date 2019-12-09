@@ -12,7 +12,7 @@ function WorkPage({ pageContext }) {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Works" />
       <S.Container>
         <h1>{title}</h1>
         <p className="description">{description}</p>

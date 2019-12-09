@@ -2,21 +2,23 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-
-import * as S from '../components/container/styled'
+import Post from '../components/post'
 
 function PostPage({ pageContext }) {
-  const { title, thumbnail, description, date } = pageContext
+  const { title, thumbnail, description, date, html } = pageContext
+
+  console.log(html)
 
   return (
     <Layout>
-      <SEO title="Home" />
-      <S.Container>
-        <h1>{title}</h1>
-        <p className="description">{description}</p>
-        <p>{thumbnail}</p>
-        <p>{date}</p>
-      </S.Container>
+      <SEO title="Posts" />
+      <Post
+        title={title} 
+        thumbnail={thumbnail}
+        description={description}
+        date={date}>
+        <div dangerouslySetInnerHTML={{__html: html}}></div>
+      </Post>
     </Layout>
   )
 }

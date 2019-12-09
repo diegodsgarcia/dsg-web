@@ -31,6 +31,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
               date(formatString: "MMMM, YYYY")
               slug
             }
+            html
           }
         }
       }
@@ -50,7 +51,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
 
   posts.data.allMarkdownRemark.edges.forEach(edge => {
     const slug = edge.node.frontmatter.slug
-    const context = edge.node.frontmatter
+    const context = { ...edge.node.frontmatter, html: edge.node.html }
 
     createPage({
       path: `/${slug}/`,
