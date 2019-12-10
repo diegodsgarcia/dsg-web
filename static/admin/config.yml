@@ -18,6 +18,19 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-      - {label: "Image", name: "thumbnail", widget: "image"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Locale", name: "locale", widget: "select", options: ["br", "en"]}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "works"
+    label: "Works"
+    folder: "works"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Company", name: "company", widget: "string"}
+      - {label: "Tecnhologies", name: "technologies", widget: "list", allow_add: true}
