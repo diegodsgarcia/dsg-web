@@ -10,5 +10,3 @@ technologies:
 - Wordpress
 - Twig
 ---
-
-# On Template

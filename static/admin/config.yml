@@ -30,7 +30,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Company", name: "company", widget: "string"}
       - {label: "Tecnhologies", name: "technologies", widget: "list", allow_add: true}

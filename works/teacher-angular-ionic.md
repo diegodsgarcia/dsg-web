@@ -10,5 +10,3 @@ technologies:
 - Angular
 - Ionic
 ---
-
-# Pousada Palos Verdes
