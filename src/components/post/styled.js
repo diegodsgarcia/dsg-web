@@ -23,8 +23,9 @@ const Time = styled.time`
 
 const Article = styled.article`
   p {
-    margin: 1rem 0;
-    line-height: 1.5rem;
+    margin: 2rem 0;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
   }
 
   h1, h2, h3 {
