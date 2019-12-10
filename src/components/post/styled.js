@@ -25,7 +25,6 @@ const Article = styled.article`
   p {
     margin: 2rem 0;
     line-height: 1.8rem;
-    font-size: 1.2rem;
   }
 
   h1, h2, h3 {
