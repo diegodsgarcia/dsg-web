@@ -10,5 +10,3 @@ technologies:
 - Greensock
 - Twig
 ---
-
-# Pousada Palos Verdes
