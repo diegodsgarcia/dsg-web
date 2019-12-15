@@ -45,8 +45,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-138688588-1",
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
+    // To learn more, visit: https://gatsby.dev/offlineW
     // `gatsby-plugin-offline`,
   ],
 }
