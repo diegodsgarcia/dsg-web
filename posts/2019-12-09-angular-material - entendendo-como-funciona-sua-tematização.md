@@ -1,5 +1,5 @@
 ---
-title: Angular Material - Entendendo como funciona sua tematização
+title: Angular Material   Entendendo como funciona sua tematização
 description: >-
   Se você já desenvolve em Angular, com certeza já ouviu falar do framework
   Angular Material. Nesse artigo vamos explorar e descobrir mais como funciona
