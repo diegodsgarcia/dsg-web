@@ -52,11 +52,137 @@ Vamos agora um pouco mais além.... No exemplo a cima nas paletas de cores utili
 
 Vamos agora criar nossas próprias paleta de cores principais! Para isso devemos definir uma váriavel map de todas as tonalidades da paleta como no exemplo a baixo:
 
-``
+```
+$dark-primary-text: #000;$light-primary-text: #fff;$app-primary-palette: (
+```
 
+```
+  50: #f3e5f5,
+```
 
+```
+  100: #e1bee7,
+```
 
+```
+  200: #ce93d8,
+```
 
+```
+  300: #ba68c8,
+```
+
+```
+  400: #ab47bc,
+```
+
+```
+  500: #9c27b0,
+```
+
+```
+  600: #8e24aa,
+```
+
+```
+  700: #7b1fa2,
+```
+
+```
+  800: #6a1b9a,
+```
+
+```
+  900: #4a148c,
+```
+
+```
+  A100: #ea80fc,
+```
+
+```
+  A200: #e040fb,
+```
+
+```
+  A400: #d500f9,
+```
+
+```
+  A700: #aa00ff,
+```
+
+```
+  contrast: (
+```
+
+```
+    50: $dark-primary-text,
+```
+
+```
+    100: $dark-primary-text,
+```
+
+```
+    200: $dark-primary-text,
+```
+
+```
+    300: $light-primary-text,
+```
+
+```
+    400: $light-primary-text,
+```
+
+```
+    500: $light-primary-text,
+```
+
+```
+    600: $light-primary-text,
+```
+
+```
+    700: $light-primary-text,
+```
+
+```
+    800: $light-primary-text,
+```
+
+```
+    900: $light-primary-text,
+```
+
+```
+    A100: $dark-primary-text,
+```
+
+```
+    A200: $light-primary-text,
+```
+
+```
+    A400: $light-primary-text,
+```
+
+```
+    A700: $light-primary-text,
+```
+
+```
+  )
+```
+
+```
+);
+```
+
+```
+
+```
 
 Iniciando no nosso arquivo style.scss, devemos primeiramente chamar o mixin mat-core(), a qual irá todos os estilos principais do Angular Material
 
