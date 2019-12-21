@@ -9,7 +9,7 @@ slug: >-
   posts/refatorando-seu-conhecimento-desvendando-o-comportamento-da-propriedade-float-css
 date: '2018-02-20 08:05:45'
 thumbnail: /assets/images/posts/float-css.png
-locale: br
+locale: pt-br
 ---
 
 

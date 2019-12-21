@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 const Wrapper = styled.div`
-  grid-gap: 1rem;
   margin: .5rem 0;
 
   figure {

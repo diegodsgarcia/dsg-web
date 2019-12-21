@@ -19,7 +19,7 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "Locale", name: "locale", widget: "select", options: ["br", "en"]}
+      - {label: "Locale", name: "locale", widget: "select", options: ["pt-br", "en"]}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "works"
     label: "Works"

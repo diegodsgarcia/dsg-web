@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Gallery from '../components/gallery'
+import Articles from '../components/articles'
 
 import * as S from '../components/container/styled'
 
@@ -19,6 +19,8 @@ function ArticlesPage() {
               thumbnail
               title
               slug
+              date(formatString: "MMMM DD - YYYY", locale: "en")
+              locale
             }
           }
         }
@@ -30,13 +32,21 @@ function ArticlesPage() {
   const titles = posts.map(({title}) => title)
   const figures = posts.map(({thumbnail}) => thumbnail)
   const slugs = posts.map(({slug}) => slug)
+  const dates = posts.map(({date}) => date)
+  const locales = posts.map(({locale}) => locale)
   
   return (
     <Layout>
       <SEO title="Works" />
       <S.Container>
         <h1>My posts</h1>
-        <Gallery figures={figures} slugs={slugs} titles={titles} />
+        <Articles 
+          figures={figures} 
+          slugs={slugs} 
+          titles={titles} 
+          dates={dates} 
+          locales={locales} 
+        />
       </S.Container>
     </Layout>
   )
