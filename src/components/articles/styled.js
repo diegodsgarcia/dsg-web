@@ -1,9 +1,14 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   grid-gap: 1rem;
+
+  ${media.lessThan('medium')`
+    padding: 0 1rem;
+  `}
 `
 
 const ArticleItem = styled.article`
