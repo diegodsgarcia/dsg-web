@@ -43,7 +43,6 @@ O Angular Material possuí uma ótima abordagem sobre a criação de sua temati
 ```
 
 ```
-
 // Geração estilos bases de todos os componentes do Angular Material
 ```
 
@@ -52,7 +51,6 @@ O Angular Material possuí uma ótima abordagem sobre a criação de sua temati
 ```
 
 ```
-
 // Definição da paleta primária
 ```
 
@@ -61,7 +59,6 @@ $app-primary: mat-palette($mat-indigo);
 ```
 
 ```
-
 // Definiçao da paleta de cores accent
 ```
 
@@ -74,7 +71,6 @@ $app-accent: mat-palette($mat-pink, A200, A100, A400);
 ```
 
 ```
-
 // Definição da paleta de cores warn (Essa definição é opcional);
 ```
 
@@ -83,7 +79,6 @@ $app-warn: mat-palette($mat-red);
 ```
 
 ```
-
 // Essa váriavel será um objeto Map a qual irá conter todas as paletas de sua aplicação
 ```
 
@@ -259,3 +254,13 @@ Como pode ver as paletas principais (Primary, Accent e Warn), tem toda sua tonal
 ```
 $primary: mat-palette($app-primary-palette, 600, 100, A400);
 ```
+
+
+
+Com isso podemos definir qualquer cor nas paletas principais do Angular Material, porém como foi citado no começo o Angular Material trabalha com 5 categorias de paletas.... Onde está as paletas **background** e **foreground**?
+
+Bom, essas paletas o angular já gera todas as definições para nos sem configurações com o método **mat-light-theme()** ou **mat-dark-theme()** e infelizmente o Angular Material não nos permite customizar essas paletas. Porém no final dessa série de Posts, vamos criar nossa própria função mixen a qual iremos customizar essas paletas **background** e **foreground**.
+
+No próximo post vamos focar em criar um componente do zero baseado nas paletas que o Angular Material nos fornece!
+
+Até a próxima!!! \o/
