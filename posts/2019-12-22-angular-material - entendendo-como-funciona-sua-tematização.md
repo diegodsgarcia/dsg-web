@@ -35,13 +35,65 @@ Para gerar um tema nos devemos declarar primeiramente as variáveis primary, acc
 O Angular Material possuí uma ótima abordagem sobre a criação de sua tematização. Vamos decifrar um pouco sobre seu exemplo no tutorial [oficial do site](https://material.angular.io/guide/theming).
 
 ```
-// Importação das váriaveis e mixens do Angular Material@import '~@angular/material/theming';
-// Geração estilos bases de todos os componentes do Angular Material@include mat-core();
-// Definição da paleta primária$app-primary: mat-palette($mat-indigo);
-// Definiçao da paleta de cores accent// OBS: Para cada paleta você pode definir as cores default, lighter, and darker, como no exemplo a baixo$app-accent: mat-palette($mat-pink, A200, A100, A400);
-// Definição da paleta de cores warn (Essa definição é opcional);$app-warn: mat-palette($mat-red);
-// Essa váriavel será um objeto Map a qual irá conter todas as paletas de sua aplicação$app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
-// Por fim este mixin irá gerar todos os estilos do componente baseado nas váriaveis de paletas// a qual foi definido a cima.@include angular-material-theme($app-theme);
+// Importação das váriaveis e mixens do Angular Material
+```
+
+```
+@import '~@angular/material/theming';
+```
+
+```
+
+// Geração estilos bases de todos os componentes do Angular Material
+```
+
+```
+@include mat-core();
+```
+
+```
+
+// Definição da paleta primária
+```
+
+```
+$app-primary: mat-palette($mat-indigo);
+```
+
+```
+
+// Definiçao da paleta de cores accent
+```
+
+```
+// OBS: Para cada paleta você pode definir as cores default, lighter, and darker, como no exemplo a baixo
+```
+
+```
+$app-accent: mat-palette($mat-pink, A200, A100, A400);
+```
+
+```
+
+// Definição da paleta de cores warn (Essa definição é opcional);
+```
+
+```
+$app-warn: mat-palette($mat-red);
+```
+
+```
+
+// Essa váriavel será um objeto Map a qual irá conter todas as paletas de sua aplicação
+```
+
+```
+$app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+// Por fim este mixin irá gerar todos os estilos do componente baseado nas váriaveis de paletas
+```
+
+```
+// a qual foi definido a cima.@include angular-material-theme($app-theme);
 ```
 
 O código a cima é um exemplo básico de criação de uma estilização de paletas customizadas no Angular Material. Todo esse código foi declarado no **style.scss** global do projeto. Esta paleta só pode ser gerada através de pré-processadores, mas caso seu projeto Angular foi criado através do CLI, você pode facilmente trocar seu processamento de estilo no **angular.json**
@@ -186,6 +238,24 @@ $app-primary-palette: (
 
 ```
 
+Como pode ver as paletas principais (Primary, Accent e Warn), tem toda sua tonalidade de cor definida entre a variação da mais clara (50) para a mais escura (A700), a qual você pode utilizar qualquer uma das tonalidades no método **mat-palette**:
 
+```
+// @Param - Paleta definida
+```
 
-Com as nossas variáveis definidas podemos gerar um tema com os mixen mat-light-theme ou mat-dark-theme. Esse mixin irar gerar as paletas restantes Accent, foregrounds e backgrounds. Após isso basta chamar o nosso mixin que irá criar todas nossas classes de acordo com nossas variáveis de tema gerado, o …………
+```
+// @Param (OPCIONAL) - Cor principal da paleta
+```
+
+```
+// @Param (OPCIONAL) - Cor ligther da paleta
+```
+
+```
+// @Param (OPCIONAL) - Cor darkner da paleta
+```
+
+```
+$primary: mat-palette($app-primary-palette, 600, 100, A400);
+```
