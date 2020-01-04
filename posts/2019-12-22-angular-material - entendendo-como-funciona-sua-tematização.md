@@ -34,7 +34,7 @@ Para gerar um tema nos devemos declarar primeiramente as variáveis primary, acc
 
 O Angular Material possuí uma ótima abordagem sobre a criação de sua tematização. Vamos decifrar um pouco sobre seu exemplo no tutorial [oficial do site](https://material.angular.io/guide/theming).
 
-```
+```scss
 // Importação das váriaveis e mixens do Angular Material
 @import '~@angular/material/theming';
 
@@ -66,7 +66,7 @@ Vamos agora um pouco mais além.... No exemplo a cima nas paletas de cores utili
 
 Vamos agora criar nossas próprias paleta de cores principais! Para isso devemos definir uma váriavel map de todas as tonalidades da paleta como no exemplo a baixo:
 
-```
+```scss
 $dark-primary-text: #000;
 $light-primary-text: #fff;
 $app-primary-palette: (
@@ -105,7 +105,7 @@ $app-primary-palette: (
 
 Como pode ver as paletas principais (Primary, Accent e Warn), tem toda sua tonalidade de cor definida entre a variação da mais clara (50) para a mais escura (A700), a qual você pode utilizar qualquer uma das tonalidades no método **mat-palette**:
 
-```
+```scss
 // @Param - Paleta definida
 // @Param (OPCIONAL) - Cor principal da paleta
 // @Param (OPCIONAL) - Cor ligther da paleta
