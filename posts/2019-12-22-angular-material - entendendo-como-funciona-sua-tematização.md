@@ -16,11 +16,11 @@ Um pouco sobre as definições e padrões:
 
 O framework trabalha com conceitos muito bem definidos proposto em todo conceito visual do Material Design. Sua divisão de paleta de cores é definida  por 5 categorias:
 
-* Primary - Cor principal da sua aplicação.
-* Accent - Cores de interação e de elementos flutuantes.
-* Warn - Cores que emitem estados de erros.
-* Backgrounds - Cores dos backgrounds  nos componentes e elementos.
-* Foregrounds - Cores de textos, ícones, divisores, etc.
+* **Primary** - Cor principal da sua aplicação.
+* **Accent** - Cores de interação e de elementos flutuantes.
+* **Warn** - Cores que emitem estados de erros.
+* **Backgrounds** - Cores dos backgrounds  nos componentes e elementos.
+* **Foregrounds** - Cores de textos, ícones, divisores, etc.
 
 As paletas primary, accent e warn são paleta de cores que possuí váriações de sua cor para a tonalidade mais clara até a mais escura, elas também possuem suas cores de contraste.
 
