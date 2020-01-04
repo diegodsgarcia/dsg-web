@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 
   ${media.lessThan('medium')`
     padding: 0 1rem;

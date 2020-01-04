@@ -44,6 +44,15 @@ const Article = styled.article`
   a {
     color: var(--text);
   }
+
+  ul {
+    list-style-type: '-';
+    margin-left: .5rem;
+
+    li {
+      padding-left: .5rem;
+    }
+  }
 `
 
 export { Wrapper, Title, Article, Time }
