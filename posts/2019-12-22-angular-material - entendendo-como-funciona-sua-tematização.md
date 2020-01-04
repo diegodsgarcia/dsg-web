@@ -36,58 +36,25 @@ O Angular Material possuí uma ótima abordagem sobre a criação de sua temati
 
 ```
 // Importação das váriaveis e mixens do Angular Material
-```
-
-```
 @import '~@angular/material/theming';
-```
 
-```
 // Geração estilos bases de todos os componentes do Angular Material
-```
-
-```
 @include mat-core();
-```
 
-```
 // Definição da paleta primária
-```
-
-```
 $app-primary: mat-palette($mat-indigo);
-```
 
-```
 // Definiçao da paleta de cores accent
-```
-
-```
 // OBS: Para cada paleta você pode definir as cores default, lighter, and darker, como no exemplo a baixo
-```
-
-```
 $app-accent: mat-palette($mat-pink, A200, A100, A400);
-```
 
-```
 // Definição da paleta de cores warn (Essa definição é opcional);
-```
-
-```
 $app-warn: mat-palette($mat-red);
-```
 
-```
 // Essa váriavel será um objeto Map a qual irá conter todas as paletas de sua aplicação
-```
-
-```
 $app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
-// Por fim este mixin irá gerar todos os estilos do componente baseado nas váriaveis de paletas
-```
 
-```
+// Por fim este mixin irá gerar todos os estilos do componente baseado nas váriaveis de 
 // a qual foi definido a cima.@include angular-material-theme($app-theme);
 ```
 
@@ -103,159 +70,48 @@ Vamos agora criar nossas próprias paleta de cores principais! Para isso devemos
 $dark-primary-text: #000;
 $light-primary-text: #fff;
 $app-primary-palette: (
-```
-
-```
   50: #f3e5f5,
-```
-
-```
   100: #e1bee7,
-```
-
-```
   200: #ce93d8,
-```
-
-```
   300: #ba68c8,
-```
-
-```
   400: #ab47bc,
-```
-
-```
   500: #9c27b0,
-```
-
-```
   600: #8e24aa,
-```
-
-```
   700: #7b1fa2,
-```
-
-```
   800: #6a1b9a,
-```
-
-```
   900: #4a148c,
-```
-
-```
   A100: #ea80fc,
-```
-
-```
   A200: #e040fb,
-```
-
-```
   A400: #d500f9,
-```
-
-```
   A700: #aa00ff,
-```
-
-```
   contrast: (
-```
-
-```
     50: $dark-primary-text,
-```
-
-```
     100: $dark-primary-text,
-```
-
-```
     200: $dark-primary-text,
-```
-
-```
     300: $light-primary-text,
-```
-
-```
     400: $light-primary-text,
-```
-
-```
     500: $light-primary-text,
-```
-
-```
     600: $light-primary-text,
-```
-
-```
     700: $light-primary-text,
-```
-
-```
     800: $light-primary-text,
-```
-
-```
     900: $light-primary-text,
-```
-
-```
     A100: $dark-primary-text,
-```
-
-```
     A200: $light-primary-text,
-```
-
-```
     A400: $light-primary-text,
-```
-
-```
     A700: $light-primary-text,
-```
-
-```
   )
-```
-
-```
 );
-```
-
-```
-
 ```
 
 Como pode ver as paletas principais (Primary, Accent e Warn), tem toda sua tonalidade de cor definida entre a variação da mais clara (50) para a mais escura (A700), a qual você pode utilizar qualquer uma das tonalidades no método **mat-palette**:
 
 ```
 // @Param - Paleta definida
-```
-
-```
 // @Param (OPCIONAL) - Cor principal da paleta
-```
-
-```
 // @Param (OPCIONAL) - Cor ligther da paleta
-```
-
-```
 // @Param (OPCIONAL) - Cor darkner da paleta
-```
-
-```
 $primary: mat-palette($app-primary-palette, 600, 100, A400);
 ```
-
-
 
 Com isso podemos definir qualquer cor nas paletas principais do Angular Material, porém como foi citado no começo o Angular Material trabalha com 5 categorias de paletas.... Onde está as paletas **background** e **foreground**?
 
