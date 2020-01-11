@@ -117,7 +117,7 @@ Com isso podemos definir qualquer cor nas paletas principais do Angular Material
 
 Bom, essas paletas o angular já gera todas as definições para nos sem configurações com o método **mat-light-theme()** ou **mat-dark-theme()** e infelizmente o Angular Material não nos permite customizar essas paletas. Porém no próximo post, vamos sobrescrever as variáveis **background** e **foreground,** tornado assim possível sua customização total!
 
-No próximo post vamos focar em criar um componente do zero baseado nas paletas que o Angular Material nos fornece!
+No [próximo post](https://dsg.net.br/posts/angular-material-entendendo-como-funciona-sua-tematizacao-parte-II/) vamos focar em criar um componente do zero baseado nas paletas que o Angular Material nos fornece!
 
 Até a próxima!!! \o/
 
