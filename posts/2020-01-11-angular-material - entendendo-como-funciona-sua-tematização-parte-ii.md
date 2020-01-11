@@ -267,7 +267,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 Agora temos total controle de customização das paletas podendo deixar todo componente criado baseado no estilo do framework!
 
-![Exemplo do card component](assets/images/posts/card-component-exemplo.jpg "Exemplo do card component")
+![Exemplo do card component](/assets/images/posts/card-component-exemplo.jpg "Exemplo do card component")
 
 Todo exemplo deste artigo está disponível online no [stackblitz](https://stackblitz.com/edit/angular-palette-theme).
 
