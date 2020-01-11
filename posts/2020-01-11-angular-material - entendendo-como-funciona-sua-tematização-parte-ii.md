@@ -216,8 +216,90 @@ Com isto, para utilizarmos essas variáveis basta no estilo do nosso componente 
 
 ### card.component.scss
 
+```scss
+@import '../../theming';
+$background: map-get($app-theme, background);
+$foreground: map-get($app-theme, foreground);
 
+.card {
+  box-shadow: 1px 1px 10px mat-color($foreground, divider);
+}
+
+.header {
+  background-color: mat-color($app-primary);
+  color: mat-color($app-primary, default-contrast);
+  padding: .5rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.content {
+  background-color: mat-color($background, card);
+  padding: .5rem;
+  color: mat-color($foreground, text);
+}
+```
+
+Caso você deseje alterar as cores das variaveis background e foreground, você deve SOBRESCREVER essas váriaveis antes de criar o tema com o nome **mat-light-theme** (para temas claros) ou **mat-dark-theme** (para temas escuros):
+
+### theming.scss
+
+```scss
+@import '~@angular/material/theming';
+
+$app-primary: mat-palette($mat-indigo, 900, 50, A400);
+$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$app-warn:    mat-palette($mat-red);
+
+$mat-light-theme-background: (
+  status-bar: mat-color($mat-grey, 300),
+  app-bar:    mat-color($mat-grey, 100),
+  background: mat-color($mat-grey, 50),
+  hover:      rgba(black, 0.04),
+  card:       white,
+  dialog:     white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: $dark-focused,
+  selected-button: mat-color($mat-grey, 300),
+  selected-disabled-button: mat-color($mat-grey, 400),
+  disabled-button-toggle: mat-color($mat-grey, 200),
+  unselected-chip: mat-color($mat-grey, 300),
+  disabled-list-option: mat-color($mat-grey, 200),
+  tooltip: mat-color($mat-grey, 700),
+);
+
+$mat-light-theme-foreground: (
+  base:              black,
+  divider:           $dark-dividers,
+  dividers:          $dark-dividers,
+  disabled:          $dark-disabled-text,
+  disabled-button:   rgba(black, 0.26),
+  disabled-text:     $dark-disabled-text,
+  elevation:         black,
+  hint-text:         $dark-disabled-text,
+  secondary-text:    $dark-secondary-text,
+  icon:              rgba(black, 0.54),
+  icons:             rgba(black, 0.54),
+  text:              rgba(black, 0.87),
+  slider-min:        rgba(black, 0.87),
+  slider-off:        rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+```
+
+## Bônus
+
+Uma ultima curiosidade
+
+Por fim todo exemplo deste artigo está disponível online no [stackblitz](https://stackblitz.com/edit/angular-palette-theme). 
+
+Obrigado galera e até mais!!! \o/
 
 ## Referências
 
-https://stackblitz.com/edit/angular-palette-themehttps://stackblitz.com/edit/angular-palette-theme
+<https://material.angular.io/guide/theming>
+
+[https://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scss](https://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scss)
