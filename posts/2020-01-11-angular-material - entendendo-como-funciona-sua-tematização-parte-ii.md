@@ -290,25 +290,7 @@ $mat-light-theme-foreground: (
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 ```
 
-## Bônus
-
-Uma ultima curiosidade que podemos melhorar é sobre a importação do arquivo **theming.scss**, pois em todo componente que criar, devemos importar seu caminho relativo, tornando assim um pouco deselegante sua importação. Porém, podemos resolver isso facilmente no angular.json, tornando os arquivos de estilo da raiz do projeto global da seguinte forma:
-
-```json
-"stylePreprocessorOptions": {
-  "includePaths": [
-    "src/"
-  ]
-}         
-```
-
-Com isso podemos importar qualquer arquivo de estilo sem passar seu caminho completo:
-
-```scss
-@import 'theming';
-```
-
-Por fim todo exemplo deste artigo está disponível online no [stackblitz](https://stackblitz.com/edit/angular-palette-theme).
+Todo exemplo deste artigo está disponível online no [stackblitz](https://stackblitz.com/edit/angular-palette-theme).
 
 Então é isso ai galeta! No próximo post iremos falar sobre como trabalhar com as fontes.
 
