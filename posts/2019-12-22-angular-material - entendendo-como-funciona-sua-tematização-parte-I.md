@@ -12,23 +12,23 @@ locale: pt-br
 ---
 Se você já desenvolve em Angular, com certeza já ouviu falar do framework Angular Material. Nesse artigo vamos explorar e descobrir mais como funciona os padrões de tematização no SASS e criar nossos próprios componentes tematizados!
 
-Um pouco sobre as definições e padrões:
+## Sobre as definições e padrões:
 
 O framework trabalha com conceitos muito bem definidos proposto em todo conceito visual do Material Design. Sua divisão de paleta de cores é definida  por 5 categorias:
 
 * **Primary** - Cor principal da sua aplicação.
 * **Accent** - Cores de interação e de elementos flutuantes.
 * **Warn** - Cores que emitem estados de erros.
-* **Backgrounds** - Cores dos backgrounds  nos componentes e elementos.
-* **Foregrounds** - Cores de textos, ícones, divisores, etc.
+* **Background** - Cores dos backgrounds  nos componentes e elementos.
+* **Foreground** - Cores de textos, ícones, divisores, etc.
 
-As paletas primary, accent e warn são paleta de cores que possuí váriações de sua cor para a tonalidade mais clara até a mais escura, elas também possuem suas cores de contraste.
+As paletas **primary**, **accent** e **warn** são paleta de cores que possuí variações de sua cor para a tonalidade mais clara até a mais escura, elas também possuem suas cores de contraste.
 
-As paletas background e foreground possuem cores fixas relacionado a todo seu projeto:
+As paletas **background** e **foreground** possuem cores fixas relacionado a todo seu projeto:
 
 Todas paletas são criadas e geradas por variáveis, funções e mixins no SASS.
 
-Para gerar um tema nos devemos declarar primeiramente as variáveis primary, accent e warn no formato Map com todas as tonalidades de nossas cores.
+Para gerar um tema nos devemos declarar primeiramente as variáveis **primary**, **accent** e **warn** no formato Map com todas as tonalidades de nossas cores.
 
 ![Exemplo de paleta](/assets/images/posts/material-design-theme.png "Exemplo de paleta")
 
@@ -64,7 +64,7 @@ Seu arquivo de customização de tema **NÃO DEVE** ser importado em nenhum outr
 
 Vamos agora um pouco mais além.... No exemplo a cima nas paletas de cores utilizamos apenas paletas pré definidas vindo do `@import '~@angular/material/theming';`
 
-Vamos agora criar nossas próprias paleta de cores principais! Para isso devemos definir uma váriavel map de todas as tonalidades da paleta como no exemplo a baixo:
+Vamos agora criar nossas próprias paleta de cores principais! Para isso devemos definir uma variável map de todas as tonalidades da paleta como no exemplo a baixo:
 
 ```scss
 $dark-primary-text: #000;
@@ -103,7 +103,7 @@ $app-primary-palette: (
 );
 ```
 
-Como pode ver as paletas principais (Primary, Accent e Warn), tem toda sua tonalidade de cor definida entre a variação da mais clara (50) para a mais escura (A700), a qual você pode utilizar qualquer uma das tonalidades no método **mat-palette**:
+Como pode ver as paletas principais (primary, accent e warn), tem toda sua tonalidade de cor definida entre a variação da mais clara (50) para a mais escura (A700), a qual você pode utilizar qualquer uma das tonalidades no método `mat-palette()`:
 
 ```scss
 // @Param - Paleta definida
@@ -115,8 +115,14 @@ $primary: mat-palette($app-primary-palette, 600, 100, A400);
 
 Com isso podemos definir qualquer cor nas paletas principais do Angular Material, porém como foi citado no começo o Angular Material trabalha com 5 categorias de paletas.... Onde está as paletas **background** e **foreground**?
 
-Bom, essas paletas o angular já gera todas as definições para nos sem configurações com o método **mat-light-theme()** ou **mat-dark-theme()** e infelizmente o Angular Material não nos permite customizar essas paletas. Porém no final dessa série de Posts, vamos criar nossa própria função mixen a qual iremos customizar essas paletas **background** e **foreground**.
+Bom, essas paletas o angular já gera todas as definições para nos sem configurações com o método **mat-light-theme()** ou **mat-dark-theme()** e infelizmente o Angular Material não nos permite customizar essas paletas. Porém no próximo post, vamos sobrescrever as variáveis **background** e **foreground,** tornado assim possível sua customização total!
 
 No próximo post vamos focar em criar um componente do zero baseado nas paletas que o Angular Material nos fornece!
 
 Até a próxima!!! \o/
+
+## Referencias
+
+<https://material.angular.io/guide/theming>
+
+<https://material.io/design/>
