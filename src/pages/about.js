@@ -27,7 +27,7 @@ function AboutPage() {
     <S.Container>
       <h1>About me</h1>
       <p className="description">
-        My name is Diego Garcia, I'm a web developer for 5 year ago. I love all about Javascript and Front-end. My main skills:
+        My name is Diego Garcia, I'm a web developer for 6 year ago. I love all about Javascript and Front-end. My main skills:
       </p>
       <ul className="list">
         <li>
