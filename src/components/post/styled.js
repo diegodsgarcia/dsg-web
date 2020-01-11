@@ -51,6 +51,7 @@ const Article = styled.article`
 
     li {
       padding-left: .5rem;
+      line-height: 1.8rem;
     }
   }
 `
