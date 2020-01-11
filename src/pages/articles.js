@@ -37,7 +37,7 @@ function ArticlesPage() {
   
   return (
     <Layout>
-      <SEO title="Works" />
+      <SEO title="Posts" />
       <S.Container>
         <h1>My posts</h1>
         <Articles 

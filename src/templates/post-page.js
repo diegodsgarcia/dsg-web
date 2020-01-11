@@ -9,7 +9,7 @@ function PostPage({ pageContext }) {
 
   return (
     <Layout>
-      <SEO title="Posts" />
+      <SEO title={title} />
       <Post
         title={title} 
         thumbnail={thumbnail}
