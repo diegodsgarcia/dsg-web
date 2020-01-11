@@ -265,8 +265,6 @@ $mat-light-theme-foreground: (
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 ```
 
-
-
 Agora temos total controle de customização das paletas podendo deixar todo componente criado baseado no estilo do framework!
 
 ![Exemplo do card component](assets/images/posts/card-component-exemplo.jpg "Exemplo do card component")
