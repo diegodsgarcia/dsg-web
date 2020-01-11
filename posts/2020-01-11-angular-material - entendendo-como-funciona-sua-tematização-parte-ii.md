@@ -88,21 +88,6 @@ export class CardComponent {
 .content {
   background-color: #fff;
   padding: .5rem;
-}.card {
-  box-shadow: 1px 1px 10px #DDD;
-}
-
-.header {
-  background-color: #000;
-  color: #fff;
-  padding: .5rem 0;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.content {
-  background-color: #fff;
-  padding: .5rem;
 }
 ```
 
@@ -112,12 +97,6 @@ Vamos agora customizar nosso header do card de acordo com a paleta **primary**, 
 
 ```scss
 @import '~@angular/material/theming';
-
-$app-primary: mat-palette($mat-indigo, 900, 50, A400);
-$app-accent:  mat-palette($mat-pink, A200, A100, A400);
-$app-warn:    mat-palette($mat-red);
-
-$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);@import '~@angular/material/theming';
 
 $app-primary: mat-palette($mat-indigo, 900, 50, A400);
 $app-accent:  mat-palette($mat-pink, A200, A100, A400);
@@ -135,10 +114,6 @@ No **style.scss** iremos apenas importar o **theming.scss**
 
 @include mat-core();
 @include angular-material-theme($app-theme);
-@import './theming';
-
-@include mat-core();
-@include angular-material-theme($app-theme);
 
 * {
   margin: 0;
@@ -147,7 +122,7 @@ No **style.scss** iremos apenas importar o **theming.scss**
 }
 ```
 
-Agora vamos importar o arquivo **theming.scss** no arquivo de estilo de nosso card. Com isso podemos utilizar a função `mat-color()` e chamar qualquer paleta de váriavel criada. Vamos adicionar no header do card a cor primária da paleta definida chamando a função `mat-color($app-primary)`:
+Agora vamos importar o arquivo **theming.scss** no arquivo de estilo de nosso card. Com isso podemos utilizar a função `mat-color()` e chamar qualquer paleta de variável criada. Vamos adicionar no header do card a cor primária da paleta definida chamando a função `mat-color($app-primary)`:
 
 ### card.component.scss
 
@@ -240,7 +215,7 @@ $foreground: map-get($app-theme, foreground);
 }
 ```
 
-Caso você deseje alterar as cores das variaveis background e foreground, você deve SOBRESCREVER essas váriaveis antes de criar o tema com o nome **mat-light-theme** (para temas claros) ou **mat-dark-theme** (para temas escuros):
+Caso você deseje alterar as cores das variáveis **background** e **foreground**, você deve SOBRESCREVER essas variáveis antes de criar o tema com o nome **mat-light-theme** (para temas claros) ou **mat-dark-theme** (para temas escuros):
 
 ### theming.scss
 
@@ -289,6 +264,12 @@ $mat-light-theme-foreground: (
 
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 ```
+
+
+
+Agora temos total controle de customização das paletas podendo deixar todo componente criado baseado no estilo do framework!
+
+![Exemplo do card component](assets/images/posts/card-component-exemplo.jpg "Exemplo do card component")
 
 Todo exemplo deste artigo está disponível online no [stackblitz](https://stackblitz.com/edit/angular-palette-theme).
 
