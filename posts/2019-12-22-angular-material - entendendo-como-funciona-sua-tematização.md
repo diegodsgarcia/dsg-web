@@ -5,7 +5,7 @@ description: >-
   Angular Material. Nesse artigo vamos explorar e descobrir mais como funciona
   os padrões de tematização no SASS e criar nossos próprios componentes
   tematizados!
-slug: posts/angular-material-entendendo-como-funciona-sua-tematizacao
+slug: posts/angular-material-entendendo-como-funciona-sua-tematizacao-parte-I
 date: '2019-12-09 02:23:37'
 thumbnail: /assets/images/posts/angular-material.jpg
 locale: pt-br
