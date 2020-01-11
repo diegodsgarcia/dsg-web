@@ -26,14 +26,11 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 @include mat-core();
 @include angular-material-theme($app-theme);@import '~@angular/material/theming';
 
-$app-primary: mat-palette($mat-indigo, 900, 50, A400);
-$app-accent:  mat-palette($mat-pink, A200, A100, A400);
-$app-warn:    mat-palette($mat-red);
-
-$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
-
-@include mat-core();
-@include angular-material-theme($app-theme);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 ```
 
 Com nosso tema definido agora podemos criar nosso componente de card:
@@ -108,6 +105,118 @@ export class CardComponent {
   padding: .5rem;
 }
 ```
+
+Vamos agora customizar nosso header do card de acordo com a paleta **primary**, para isso vamos criar um arquivo chamado **theming.scss** na raiz do projeto e adicionar neste arquivo apenas as paletas de cores que definimos no **style.scss**
+
+### theming.scss
+
+```scss
+@import '~@angular/material/theming';
+
+$app-primary: mat-palette($mat-indigo, 900, 50, A400);
+$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$app-warn:    mat-palette($mat-red);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);@import '~@angular/material/theming';
+
+$app-primary: mat-palette($mat-indigo, 900, 50, A400);
+$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$app-warn:    mat-palette($mat-red);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+```
+
+No **style.scss** iremos apenas importar o **theming.scss**
+
+### style.scss
+
+```scss
+@import './theming';
+
+@include mat-core();
+@include angular-material-theme($app-theme);
+@import './theming';
+
+@include mat-core();
+@include angular-material-theme($app-theme);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+```
+
+Agora vamos importar o arquivo **theming.scss** no arquivo de estilo de nosso card. Com isso podemos utilizar a função `mat-color()` e chamar qualquer paleta de váriavel criada. Vamos adicionar no header do card a cor primária da paleta definida chamando a função `mat-color($app-primary)`:
+
+### card.component.scss
+
+```scss
+@import '../../theming';
+
+.card {
+  box-shadow: 1px 1px 10px #DDD;
+}
+
+.header {
+  background-color: mat-color($app-primary);
+  color: #fff;
+  padding: .5rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.content {
+  background-color: #fff;
+  padding: .5rem;
+}
+```
+
+Com arquivo **theming.scss** podemos acessar apenas as paletas principais (primary, accent e warn), porém para a criação de um componente essas paletas não são o suficiente. Como podemos definir as cores de fundo do card ou as bordas? Para isso devemos entender qual variável essas cores são definidas e felizmente graças a magia do open source, você pode ver todas as variáveis de estilo do Angular Material [neste link](https://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scsshttps://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scss). Com base no código implementado pela framework as variáveis de background e foreground são definidas da seguinte forma:
+
+```scss
+$background: (
+  status-bar: mat-color($mat-grey, 300),
+  app-bar:    mat-color($mat-grey, 100),
+  background: mat-color($mat-grey, 50),
+  hover:      rgba(black, 0.04),
+  card:       white,
+  dialog:     white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: $dark-focused,
+  selected-button: mat-color($mat-grey, 300),
+  selected-disabled-button: mat-color($mat-grey, 400),
+  disabled-button-toggle: mat-color($mat-grey, 200),
+  unselected-chip: mat-color($mat-grey, 300),
+  disabled-list-option: mat-color($mat-grey, 200),
+  tooltip: mat-color($mat-grey, 700),
+);
+
+$foreground: (
+  base:              black,
+  divider:           $dark-dividers,
+  dividers:          $dark-dividers,
+  disabled:          $dark-disabled-text,
+  disabled-button:   rgba(black, 0.26),
+  disabled-text:     $dark-disabled-text,
+  elevation:         black,
+  hint-text:         $dark-disabled-text,
+  secondary-text:    $dark-secondary-text,
+  icon:              rgba(black, 0.54),
+  icons:             rgba(black, 0.54),
+  text:              rgba(black, 0.87),
+  slider-min:        rgba(black, 0.87),
+  slider-off:        rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+```
+
+Com isto, para utilizarmos essas variáveis basta no estilo do nosso componente criar uma variável pegando o background do tema criado e por fim basta chamar as propriedades desejadas com o método **mat-color()**:
+
+### card.component.scss
+
+
 
 ## Referências
 
