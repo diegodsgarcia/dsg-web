@@ -88,6 +88,21 @@ A tipográfia no framework trabalha baseado nos conceitos do Angular Material, d
 
 Podemos utilizar qualquer tipo de level na aplicação, desde que respeito sua forma semântica.
 
+Vamos utilizar estas classes no nosso [card component](https://stackblitz.com/edit/angular-palette-theme):
+
+### card.component.html
+
+```html
+<div class="card">
+  <header class="header">
+    <h2 class="mat-h2">{{ title }}</h2>
+  </header>
+  <div class="content mat-body">
+    <ng-content></ng-content>
+  </div>
+</div>
+```
+
 Por padrão o framework utiliza a fonte Roboto, para podermos utilizar todo level semântico de tipográfia, basta importar a fonte no index.html
 
 ## Referencias
