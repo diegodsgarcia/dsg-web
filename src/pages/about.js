@@ -46,7 +46,7 @@ function AboutPage() {
           Angular
         </li>
         <li>
-          React
+          ReactJS
         </li>
         <li>
           Java / Kotlin

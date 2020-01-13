@@ -7,6 +7,7 @@ const Header = styled.header`
   height: 80px;
   background-color: var(--background);
   z-index: 3;
+  transition: .2s background-color;
 `
 
 const Nav = styled.nav`

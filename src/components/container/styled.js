@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 const Container = styled.section`
   position: relative;
-  width: 768px;
+  width: 1000px;
   min-height: calc(100vh - 80px);
   margin: 0 auto 0;
   text-align: center;
