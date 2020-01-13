@@ -1,18 +1,18 @@
 ---
 title: Angular Material   Entendendo como funciona sua tematização (Parte I)
 description: >-
-  Se você já desenvolve em Angular, com certeza já ouviu falar do framework
-  Angular Material. Nesse artigo vamos explorar e descobrir mais como funciona
-  os padrões de tematização no SASS e criar nossos próprios componentes
-  tematizados!
+  Se você desenvolve aplicações em Angular, com certeza já ouviu falar de sua
+  extensão visual, o Angular Material. Nesta série de artigos vamos explorar e
+  descobrir mais como funciona os padrões de tematização e criar nossos próprios
+  componentes tematizados!
 slug: posts/angular-material-entendendo-como-funciona-sua-tematizacao-parte-I
 date: '2019-12-09 02:23:37'
 thumbnail: /assets/images/posts/angular-material.jpg
 locale: pt-br
 ---
-Se você já desenvolve em Angular, com certeza já ouviu falar do framework Angular Material. Nesse artigo vamos explorar e descobrir mais como funciona os padrões de tematização no SASS e criar nossos próprios componentes tematizados!
+Se você desenvolve aplicações em Angular, com certeza já ouviu falar de sua extensão visual, o [Angular Material](https://material.angular.io/). Nesta série de artigos vamos explorar e descobrir mais sobre como funciona os padrões de tematização e criar nossos próprios componentes tematizados!
 
-## Sobre as definições e padrões:
+## Definições e padrões:
 
 O framework trabalha com conceitos muito bem definidos proposto em todo conceito visual do Material Design. Sua divisão de paleta de cores é definida  por 5 categorias:
 
