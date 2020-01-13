@@ -55,7 +55,8 @@ $app-warn: mat-palette($mat-red);
 $app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 
 // Por fim este mixin irá gerar todos os estilos do componente baseado nas váriaveis de 
-// a qual foi definido a cima.@include angular-material-theme($app-theme);
+// a qual foi definido a cima.
+@include angular-material-theme($app-theme)
 ```
 
 O código a cima é um exemplo básico de criação de uma estilização de paletas customizadas no Angular Material. Todo esse código foi declarado no **style.scss** global do projeto. Esta paleta só pode ser gerada através de pré-processadores, mas caso seu projeto Angular foi criado através do CLI, você pode facilmente trocar seu processamento de estilo no **angular.json**
