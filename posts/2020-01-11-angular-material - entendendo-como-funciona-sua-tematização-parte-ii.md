@@ -10,9 +10,9 @@ date: '2020-01-11 10:28:10'
 thumbnail: /assets/images/posts/angular-material-parte-2.png
 locale: pt-br
 ---
-No último post vimos sobre o Material Design e Angular Material.Falamos sobre como o Angular Material trabalha em sua tematização aplicada no framework. Nessa continuação vamos criar nosso próprio componente utilizando a tematização de paletas.
+No último post vimos sobre o Material Design e Angular Material. Falamos sobre como o Angular Material trabalha em sua tematização. Nessa continuação vamos criar nosso próprio componente utilizando a tematização de paletas.
 
-Vamos direto ao que interessa! Vamos criar um componente card a qual irá possuir todas suas definições de cores baseada na paleta do tema. Vamos criar nossas paletas primary, accent, warn e definir seu tema no arquivo global de estilo do projeto **(style.scss)**:
+Vamos direto ao que interessa! Vamos criar um **componente card** a qual irá possuir todas suas definições de cores baseada na paleta do tema. Vamos criar nossas paletas primary, accent, warn e definir seu tema no arquivo global de estilo do projeto **(style.scss)**:
 
 ```scss
 @import '~@angular/material/theming';
@@ -122,7 +122,7 @@ No **style.scss** iremos apenas importar o **theming.scss**
 }
 ```
 
-Agora vamos importar o arquivo **theming.scss** no arquivo de estilo de nosso card. Com isso podemos utilizar a função `mat-color()` e chamar qualquer paleta de variável criada. Vamos adicionar no header do card a cor primária da paleta definida chamando a função `mat-color($app-primary)`:
+Agora vamos importar o arquivo **theming.scss** no arquivo de estilo de nosso card. Com isso podemos utilizar a função `mat-color()` e chamar qualquer paleta de variável criada. Vamos adicionar no header do card a cor primária da paleta, chamando a função `mat-color($app-primary)`:
 
 ### card.component.scss
 
@@ -147,7 +147,7 @@ Agora vamos importar o arquivo **theming.scss** no arquivo de estilo de nosso ca
 }
 ```
 
-Com arquivo **theming.scss** podemos acessar apenas as paletas principais (primary, accent e warn), porém para a criação de um componente essas paletas não são o suficiente. Como podemos definir as cores de fundo do card ou as bordas? Para isso devemos entender qual variável essas cores são definidas e felizmente graças a magia do open source, você pode ver todas as variáveis de estilo do Angular Material [neste link](https://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scsshttps://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scss). Com base no código implementado pela framework as variáveis de background e foreground são definidas da seguinte forma:
+Com arquivo **theming.scss** podemos acessar apenas as paletas principais (primary, accent e warn), porém para a criação de um componente essas paletas não são o suficiente. Como podemos definir as cores de fundo do card ou as bordas? Para isso devemos entender qual variável essas cores são definidas e felizmente, graças a magia do open source, você pode ver todas as variáveis de estilo do Angular Material [neste link](https://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scsshttps://github.com/angular/components/blob/9db13336393eab8bebbc151043917829fa0bb013/src/material/core/theming/_palette.scss). Com base no código implementado pela **framework** as variáveis de background e **foreground** são definidas da seguinte forma:
 
 ```scss
 $background: (
@@ -187,7 +187,7 @@ $foreground: (
 );
 ```
 
-Com isto, para utilizarmos essas variáveis basta no estilo do nosso componente criar uma variável pegando o background do tema criado e por fim basta chamar as propriedades desejadas com o método **mat-color()**:
+Com isto, para utilizarmos essas variáveis basta no estilo do nosso componente criar uma variável pegando o background e foreground do tema criado e por fim chamar as propriedades desejadas com o método **mat-color()**:
 
 ### card.component.scss
 
@@ -215,7 +215,7 @@ $foreground: map-get($app-theme, foreground);
 }
 ```
 
-Caso você deseje alterar as cores das variáveis **background** e **foreground**, você deve SOBRESCREVER essas variáveis antes de criar o tema com o nome **mat-light-theme** (para temas claros) ou **mat-dark-theme** (para temas escuros):
+Caso você deseje alterar as cores das variáveis **background** e **foreground**, você deve **SOBRESCREVER** essas variáveis antes de criar o tema com o nome **mat-light-theme** (para temas claros) ou **mat-dark-theme** (para temas escuros):
 
 ### theming.scss
 
@@ -265,15 +265,15 @@ $mat-light-theme-foreground: (
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 ```
 
-Agora temos total controle de customização das paletas podendo deixar todo componente criado baseado no estilo do framework!
+Agora temos total controle de customização das paletas podendo deixar todo componente criado baseado no estilo do Angular Material!
 
 ![Exemplo do card component](/assets/images/posts/card-component-exemplo.jpg "Exemplo do card component")
 
 Todo exemplo deste artigo está disponível online no [stackblitz](https://stackblitz.com/edit/angular-palette-theme).
 
-Então é isso ai galeta! No próximo post iremos falar sobre como trabalhar com as fontes.
+Então é isso ai galera! No próximo post iremos falar sobre como trabalhar com as fontes no Angular Material.
 
-Obrigado galera e até mais!!! \o/
+Obrigado e até mais!!! \o/
 
 ## Referências
 
