@@ -28,7 +28,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
               title
               thumbnail
               description
-              date(formatString: "DD MMMM YYYY")
+              date(formatString: "DD MMMM, YYYY")
               slug
             }
             html

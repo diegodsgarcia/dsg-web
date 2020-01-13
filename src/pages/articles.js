@@ -12,7 +12,7 @@ function ArticlesPage() {
   const datas = useStaticQuery(
     graphql`
     {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}, , sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             frontmatter {
@@ -39,7 +39,7 @@ function ArticlesPage() {
     <Layout>
       <SEO title="Posts" />
       <S.Container>
-        <h1>My posts</h1>
+        <h1>My articles</h1>
         <Articles 
           figures={figures} 
           slugs={slugs} 

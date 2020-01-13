@@ -19,6 +19,12 @@ const Title = styled.h1`
 
 const Time = styled.time`
   color: var(--textHover);
+  opacity: .5;
+  font-style: italic;
+`
+
+const Thumbnail = styled.figure`
+  margin: 1rem 0;
 `
 
 const Article = styled.article`
@@ -56,4 +62,4 @@ const Article = styled.article`
   }
 `
 
-export { Wrapper, Title, Article, Time }
+export { Wrapper, Title, Thumbnail, Article, Time }
