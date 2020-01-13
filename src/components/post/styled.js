@@ -55,6 +55,10 @@ const Article = styled.article`
     color: var(--text);
   }
 
+  strong, b {
+    font-weight: bold;
+  }
+
   ul {
     list-style-type: '-';
     margin-left: .5rem;
