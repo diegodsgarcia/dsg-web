@@ -12,7 +12,9 @@ locale: pt-br
 ---
 No último post vimos sobre o Material Design e Angular Material. Falamos sobre como o Angular Material trabalha em sua tematização. Nessa continuação vamos criar nosso próprio componente utilizando a tematização de paletas.
 
-Vamos direto ao que interessa! Vamos criar um **componente card** a qual irá possuir todas suas definições de cores baseada na paleta do tema. Vamos criar nossas paletas primary, accent, warn e definir seu tema no arquivo global de estilo do projeto **(style.scss)**:
+Vamos direto ao que interessa! Vamos criar um **componente card** a qual irá possuir todas suas definições de cores baseada na paleta do tema. Vamos criar nossas paletas primary, accent, warn e definir seu tema no arquivo global de estilo do projeto:
+
+### styles.scss
 
 ```scss
 @import '~@angular/material/theming';
@@ -24,7 +26,8 @@ $app-warn:    mat-palette($mat-red);
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 @include mat-core();
-@include angular-material-theme($app-theme);@import '~@angular/material/theming';
+@include angular-material-theme($app-theme);
+@import '~@angular/material/theming';
 
 * {
   margin: 0;
