@@ -42,14 +42,48 @@ A tipográfia no framework trabalha baseado nos conceitos do Angular Material, d
   <tr>
     <td>headline</td>
     <td>.mat-h1, .mat-headline</td>
-    <td>Seção de cabeçalho, corresponde a tag &lt;h1&gt; </td>
+    <td>Seção de cabeçalho, corresponde a tag &lt;h1&gt;</td>
   </tr>  
   <tr>
     <td>title</td>
     <td>.mat-h2, .mat-title</td>
-    <td>Seção de cabeçalho, corresponde a tag &lt;h2&gt; </td>
+    <td>Seção de cabeçalho, corresponde a tag &lt;h2&gt;</td>
   </tr>
-
+  <tr>
+    <td>subheading-2</td>
+    <td>.mat-h3, .mat-subheading-2</td>
+    <td>Seção de cabeçalho, corresponde a tag &lt;h3&gt;</td>
+  </tr>  
+  <tr>
+    <td>subheading-1</td>
+    <td>.mat-h3, .mat-subheading-1</td>
+    <td>Seção de cabeçalho, corresponde a tag &lt;h4&gt;</td>
+  </tr>
+  <tr>
+    <td>body-1</td>
+    <td>.mat-body, .mat-body-1</td>
+    <td>Texto base do body</td>
+  </tr>  
+  <tr>
+    <td>body-2</td>
+    <td>.mat-body-strong, .mat-body-2</td>
+    <td>Texto base do bolder</td>
+  </tr>
+  <tr>
+    <td>caption</td>
+    <td>.mat-small, .mat-caption</td>
+    <td>Pequeno, texto para avisos</td>
+  </tr>  
+  <tr>
+    <td>button</td>
+    <td>Sem classe, usado direto no componente</td>
+    <td>Botões e ancoras</td>
+  </tr>
+  <tr>
+    <td>input</td>
+    <td>Sem classe, usado direto no componente</td>
+    <td>Campos input</td>
+  </tr>  
 </table> 
 
 ## Referencias
