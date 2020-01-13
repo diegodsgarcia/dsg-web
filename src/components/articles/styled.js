@@ -17,9 +17,15 @@ const ArticleItem = styled.article`
     flex-direction: column;
     height: 100%;
     text-decoration: none;
+    padding: .8rem;
+    transition: .2s box-shadow;
 
     > * {
       flex-grow: 1;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px var(--border);
     }
   }
 `
@@ -42,12 +48,16 @@ const Date = styled.div`
 `
 
 const Locale = styled.div`
+  display: flex;
+  align-items: center;
   color: var(--title);
   font-size: .8rem;
   margin: 0;
 
-  span {
-    color: var(--text);
+  img {
+    width: 20px;
+    height: 20px;
+    margin: 0 .5rem;
   }
 `
 

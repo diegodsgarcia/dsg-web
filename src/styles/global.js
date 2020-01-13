@@ -84,6 +84,7 @@ const GlobalStyles = createGlobalStyle`
     --figureHover: #000000b3;
     --themeButton: #fff;
     --codeEditor: #2d2d2d;
+    --border: #fff;
   }
 
   body.light {
@@ -95,6 +96,7 @@ const GlobalStyles = createGlobalStyle`
     --figureHover: #ffffffb3;
     --themeButton: #000;
     --codeEditor: #fff;
+    --border: #000;
   }
 
   .gatsby-highlight {

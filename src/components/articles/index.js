@@ -3,6 +3,9 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import { getThemeColor } from '../../utils/theme'
 
+import BrazilSVG from '../../images/brazil.svg'
+import EuaSVG from '../../images/eua.svg'
+
 import * as S from './styled'
 
 function Articles({figures, slugs, titles, dates, locales }) {
@@ -25,7 +28,7 @@ function Articles({figures, slugs, titles, dates, locales }) {
                   {dates[i]}
                 </S.Date>
                 <S.Locale>
-                  Locale: <span>{locales[i]}</span>
+                  Locale: {locales[i] === 'pt-br' ? <img src={BrazilSVG} alt="pt-BR" /> : <img src={EuaSVG} alt="eua"  /> }
                 </S.Locale>
               </S.Header>
               <figure>
