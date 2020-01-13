@@ -103,7 +103,35 @@ Vamos utilizar estas classes no nosso [card component](https://stackblitz.com/ed
 </div>
 ```
 
-Por padrão o framework utiliza a fonte Roboto, para podermos utilizar todo level semântico de tipográfia, basta importar a fonte no index.html
+## Customizando tipografia
+
+Por padrão o framework utiliza a fonte Roboto. Mas como podemos trocar a fonte ou seus tamanhos? Podemos criar uma variável de configuração dos leveis da fonte.
+
+```scss
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+```
+
+Você pode perceber que a variável `$font-family`, apenas é definida o nome da fonte.
+
+Na função `mat-typography-level()` é recebida os 3 parâmetros na seguinte ordem:
+
+* Font-size
+* Line-height
+* Font-weight 
+
+Por fim basta passar como parâmetro na função `mat-core()`, assim todos componentes serão gerado na configuração de tipografia customizada:
+
+```scss
+@include mat-core($custom-typography);
+```
+
+### style.scss
 
 ## Referencias
 
