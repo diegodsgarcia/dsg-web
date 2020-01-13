@@ -47,6 +47,10 @@ const Article = styled.article`
     font-size: 1.8rem;
   }
 
+  h3 {
+    font-size: 1.5rem;
+  }
+
   a {
     color: var(--text);
   }
