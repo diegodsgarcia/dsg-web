@@ -1,5 +1,5 @@
 ---
-title: Angular Material   Entendendo como funciona sua tematização (Parte I)
+title: Angular Material  - Entendendo como funciona sua tematização (Parte I)
 description: >-
   Se você desenvolve aplicações em Angular, com certeza já ouviu falar de sua
   extensão visual, o Angular Material. Nesta série de artigos vamos explorar e
