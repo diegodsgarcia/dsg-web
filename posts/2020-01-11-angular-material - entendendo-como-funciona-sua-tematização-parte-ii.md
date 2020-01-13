@@ -1,5 +1,5 @@
 ---
-title: Angular Material   Entendendo como funciona sua tematização (Parte II)
+title: Angular Material  -  Entendendo como funciona sua tematização (Parte II)
 description: >-
   No último post vimos sobre o Material Design e Angular Material.Falamos sobre
   como o Angular Material trabalha em sua tematização aplicada no framework.
