@@ -32,7 +32,7 @@ const ArticleItem = styled.article`
 
 const Header = styled.header`
   text-align: left;
-  min-height: 100px;
+  min-height: 185px;
   padding-bottom: 1rem;
 `
 
@@ -61,9 +61,14 @@ const Locale = styled.div`
   }
 `
 
+const Figure = styled.figure`
+  width: 100%;
+  height: 250px;
+`
+
 const Image = styled.img`
   width: 100%;
   height: 100%;
 `
 
-export { Wrapper, ArticleItem, Header, Title, Date, Locale, Image }
+export { Wrapper, ArticleItem, Header, Title, Date, Locale, Figure, Image }

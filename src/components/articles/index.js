@@ -31,10 +31,10 @@ function Articles({figures, slugs, titles, dates, locales }) {
                   Locale: {locales[i] === 'pt-br' ? <img src={BrazilSVG} alt="pt-BR" /> : <img src={EuaSVG} alt="eua"  /> }
                 </S.Locale>
               </S.Header>
-              <figure>
+              <S.Figure>
                 <S.Image src={img}>
                 </S.Image>
-              </figure>
+              </S.Figure>
             </AniLink>
           </S.ArticleItem>
         ))}
