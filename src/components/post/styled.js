@@ -68,6 +68,21 @@ const Article = styled.article`
       line-height: 1.8rem;
     }
   }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr {
+    td, th {
+      padding: .8rem .5rem;
+      border: 1px solid var(--border);
+    }
+
+    th {
+      font-weight: 700;
+    }
+  }
 `
 
 export { Wrapper, Title, Thumbnail, Article, Time }

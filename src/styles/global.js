@@ -84,7 +84,7 @@ const GlobalStyles = createGlobalStyle`
     --figureHover: #000000b3;
     --themeButton: #fff;
     --codeEditor: #2d2d2d;
-    --border: #fff;
+    --border: #ffffff61;
   }
 
   body.light {
