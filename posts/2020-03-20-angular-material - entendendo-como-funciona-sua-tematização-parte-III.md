@@ -6,7 +6,7 @@ description: >-
   sequência falando um pouco sobre como funciona a tipografia no framework.
 slug: angular-material-entendendo-como-funciona-sua-tematizacao-parte-III
 date: '2020-01-13 06:02:00'
-thumbnail: assets/images/posts/tipografia.png
+thumbnail: /assets/images/posts/tipografia.png
 locale: pt-br
 ---
 Nos últimos artigos falamos sobre a tematização de paletas no Angular Material e criamos nosso próprio componente card baseado na mesma. Vamos finalizar essa sequência falando um pouco sobre como funciona a tipografia no framework.
