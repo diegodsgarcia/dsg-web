@@ -5,6 +5,7 @@ description: 'The website of hotel Pousada Palos Verdes a zero template was crea
 date: '2018-08-01'
 company: 'Pousada Palos Verdes'
 slug: 'works/palos-verdes'
+url: 'https://palosverdes.com.br'
 technologies:
 - Wordpress
 - Greensock

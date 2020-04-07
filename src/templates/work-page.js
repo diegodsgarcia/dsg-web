@@ -8,7 +8,7 @@ import * as S from '../components/container/styled'
 import { Figure } from '../components/figure/styled'
 
 function WorkPage({ pageContext }) {
-  const { title, thumbnail, description, company, date, technologies } = pageContext
+  const { title, thumbnail, description, company, date, url, technologies } = pageContext
 
   return (
     <Layout>
@@ -17,9 +17,9 @@ function WorkPage({ pageContext }) {
         <h1>{title}</h1>
         <p className="description">{description}</p>
         <Description date={date} company={company} technologies={technologies} />
-        
+
         <Figure>
-          <img src={thumbnail} alt={title}/>
+          <a href={url}><img src={thumbnail} alt={title} /></a>
         </Figure>
       </S.Container>
     </Layout>

@@ -1,4 +1,4 @@
-exports.createPages = async ({actions: { createPage }, graphql }) => {
+exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const works = await graphql(`
     {
       allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/works/"}}) {
@@ -12,6 +12,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
               company
               technologies
               slug
+              url
             }
           }
         }
@@ -37,7 +38,7 @@ exports.createPages = async ({actions: { createPage }, graphql }) => {
       }
     }
   `)
-  
+
   works.data.allMarkdownRemark.edges.forEach(edge => {
     const slug = edge.node.frontmatter.slug
     const context = edge.node.frontmatter

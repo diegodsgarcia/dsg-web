@@ -12,7 +12,7 @@ function WorksPage() {
   const datas = useStaticQuery(
     graphql`
     {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/works/"}}) {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/works/"}}, sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             frontmatter {
@@ -27,14 +27,14 @@ function WorksPage() {
   `)
 
   const works = datas.allMarkdownRemark.edges.map(edge => edge.node.frontmatter)
-  const figures = works.map(({thumbnail}) => thumbnail)
-  const slugs = works.map(({slug}) => slug)
-  const titles = works.map(({title}) => title)
+  const figures = works.map(({ thumbnail }) => thumbnail)
+  const slugs = works.map(({ slug }) => slug)
+  const titles = works.map(({ title }) => title)
 
   useEffect(() => {
     new TimelineMax()
-      .staggerFromTo('h1, p', 1, { opacity: 0 }, { opacity: 1}, .2)
-      .staggerFromTo('figure', .5, { scale: 0 }, { scale: 1}, .5)
+      .staggerFromTo('h1, p', 1, { opacity: 0 }, { opacity: 1 }, .2)
+      .staggerFromTo('figure', .5, { scale: 0 }, { scale: 1 }, .5)
   }, [])
 
   return (
