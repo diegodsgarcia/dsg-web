@@ -2,7 +2,7 @@ import * as S from './styled'
 
 export type CodeProps = {
   command: string
-  code: any
+  code: Record<string, unknown> | Record<string, unknown>[]
 }
 
 const CodeEditor = ({ command, code }: CodeProps) => {

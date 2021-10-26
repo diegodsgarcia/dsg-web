@@ -4,7 +4,12 @@ import works from 'contents/works.json'
 import CodeEditor from 'components/CodeEditor'
 
 type WorksProps = {
-  works: any
+  works: {
+    title: string
+    description: string
+    date: string
+    technologies: string[]
+  }[]
 }
 
 const Works = ({ works }: WorksProps) => {

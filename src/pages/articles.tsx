@@ -15,6 +15,7 @@ type Content = {
 }
 
 const Articles = ({ contents }: { contents: Content[]}) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const articles = contents.map(blog => matter(blog))
 
   return (
@@ -25,6 +26,7 @@ const Articles = ({ contents }: { contents: Content[]}) => {
 }
 
 export const getStaticProps = async () => {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const fs = require('fs')
   const files = fs.readdirSync(`${process.cwd()}/src/contents/articles`, 'utf-8') as string[]
   const articles = files.filter(file => file.endsWith('md'))
