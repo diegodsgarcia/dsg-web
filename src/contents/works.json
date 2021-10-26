@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Palos Verdes",
+    "description": "The website of hotel Pousada Palos Verdes a zero template was created, all designed with the client." ,
+    "date": "2017-02-01",
+    "technologies": [
+      "Wordpress", "Greensock", "Twig"
+    ]
+  },
+  {
+    "title": "On Template",
+    "description": "The On Template was my main works in FIAP. The template was based in Angular to make a content of platform EAD with agility and research." ,
+    "date": "2017-02-01",
+    "technologies": [
+      "Angular", "NodeJS"
+    ]
+  },
+  {
+    "title": "Teacher Angular / Ionic",
+    "description": "I was a teacher of EAD in FIAP. I wrote a course on creating hybrid applications with Ionic and basic introduction to Angular and NodeJS." ,
+    "date": "2018-08-01",
+    "technologies": [
+      "Angular", "Ionic", "NodeJS"
+    ]
+  },
+  {
+    "title": "Website FIAP",
+    "description": "I worked as a Front end developer in FIAP. The main project was to implement a redesign of site with a more 2 devs" ,
+    "date": "2018-05-01",
+    "technologies": [
+      "Wordpress", "Greensock", "Twig"
+    ]
+  },
+  {
+    "title": "Sinqia - Lib Albert",
+    "description": "I worked as a Front end developer in Sinqia. My main project was development a Lib of Design System by Company called Albert." ,
+    "date": "2020-04-01",
+    "technologies": [
+      "Angular"
+    ]
+  },
+  {
+    "title": "Anime Season",
+    "description": "This is a project open source to to can see the Animes of Season. The API is public to use in any project" ,
+    "date": "2020-04-07",
+    "technologies": [
+      "React", "NodeJS"
+    ]
+  }
+]
