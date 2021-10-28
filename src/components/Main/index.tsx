@@ -36,6 +36,9 @@ const Main = ({ children }: MainProps) => {
         <TabItem href="/works">
           cat works
         </TabItem>
+        <TabItem href="/articles">
+          cat articles
+        </TabItem>
       </S.Nav>
       <S.Body>
         {children}

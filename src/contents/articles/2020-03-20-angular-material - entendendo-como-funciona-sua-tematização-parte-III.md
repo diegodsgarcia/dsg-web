@@ -5,8 +5,8 @@ description: >-
   e criamos nosso próprio componente card baseado na mesma. Vamos finalizar essa
   sequência falando um pouco sobre como funciona a tipografia no framework.
 slug: angular-material-entendendo-como-funciona-sua-tematizacao-parte-III
-date: '2020-01-13 06:02:00'
-thumbnail: /assets/images/posts/tipografia.png
+date: '2020-01-13'
+thumbnail: ./img/tipografia.png
 locale: pt-br
 ---
 Nos últimos artigos falamos sobre a tematização de paletas no Angular Material e criamos nosso próprio componente card baseado na mesma. Vamos finalizar essa sequência falando um pouco sobre como funciona a tipografia no framework.
@@ -66,7 +66,7 @@ Na função `mat-typography-level()` é recebida os 3 parâmetros na seguinte or
 
 * Font-size
 * Line-height
-* Font-weight 
+* Font-weight
 
 Por fim basta passar como parâmetro na função `mat-core()`, assim todos componentes serão gerado na configuração de tipografia customizada:
 

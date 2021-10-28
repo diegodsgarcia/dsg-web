@@ -5,9 +5,9 @@ description: >-
   extensão visual, o Angular Material. Nesta série de artigos vamos explorar e
   descobrir mais como funciona os padrões de tematização e criar nossos próprios
   componentes tematizados!
-slug: posts/angular-material-entendendo-como-funciona-sua-tematizacao-parte-I
-date: '2019-12-09 02:23:37'
-thumbnail: /assets/images/posts/angular-material-parte-1.png
+slug: angular-material-entendendo-como-funciona-sua-tematizacao-parte-I
+date: '2019-12-09'
+thumbnail: /img/angular-material-parte-1.png
 locale: pt-br
 ---
 Se você desenvolve aplicações em Angular, com certeza já ouviu falar de sua extensão visual, o [Angular Material](https://material.angular.io/). Nesta série de artigos vamos explorar e descobrir mais sobre como funciona os padrões de tematização e criar nossos próprios componentes tematizados!
@@ -30,7 +30,7 @@ Todas paletas são criadas e geradas por variáveis, funções e mixins no SASS.
 
 Para gerar um tema nos devemos declarar primeiramente as variáveis **primary**, **accent** e **warn** no formato Map com todas as tonalidades de nossas cores.
 
-![Exemplo de paleta](/assets/images/posts/material-design-theme.png "Exemplo de paleta")
+![Exemplo de paleta](/img/material-design-theme.png "Exemplo de paleta")
 
 O Angular Material possuí uma ótima abordagem sobre a criação de sua tematização. Vamos decifrar um pouco sobre seu exemplo no tutorial [oficial do site](https://material.angular.io/guide/theming).
 
@@ -54,7 +54,7 @@ $app-warn: mat-palette($mat-red);
 // Essa váriavel será um objeto Map a qual irá conter todas as paletas de sua aplicação
 $app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 
-// Por fim este mixin irá gerar todos os estilos do componente baseado nas váriaveis de 
+// Por fim este mixin irá gerar todos os estilos do componente baseado nas váriaveis de
 // a qual foi definido a cima.
 @include angular-material-theme($app-theme)
 ```

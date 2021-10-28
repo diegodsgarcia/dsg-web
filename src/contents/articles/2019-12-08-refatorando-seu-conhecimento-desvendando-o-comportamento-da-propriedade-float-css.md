@@ -6,9 +6,9 @@ description: >-
   A propriedade float está desde os primórdios da web e ela é considerada uma
   das propriedades mais básicas, porem você realmente sabe seu comportamento?
 slug: >-
-  posts/refatorando-seu-conhecimento-desvendando-o-comportamento-da-propriedade-float-css
-date: '2018-02-20 08:05:45'
-thumbnail: /assets/images/posts/float-css.png
+  refatorando-seu-conhecimento-desvendando-o-comportamento-da-propriedade-float-css
+date: '2018-02-20'
+thumbnail: /img/float-css.png
 locale: pt-br
 ---
 
@@ -21,7 +21,7 @@ Todos elementos HTML segue um comportamento (inline, block, table, flex, etc…)
 
 O float foi criado pensando em layouts com o design “text wrap” que explicando em poucas palavras por min, seria como o “estilo em jornal”.
 
-![Protótipo de layout utilizando float](/assets/images/posts/float-example-default.png "Protótipo de layout utilizando float")
+![Protótipo de layout utilizando float](/img/float-example-default.png "Protótipo de layout utilizando float")
 
 A maioria das vezes quando aprendemos algo básico, sempre aceitamos a teoria básica e com o tempo, revisamos o básico do básico e aprendemos mais coisas novas (é como se fosse a refatoração do seu conhecimento).
 
@@ -37,49 +37,49 @@ Então criei uma div no meio do fluxo de um elemento float para testar os seus v
 
 ## DISPLAY BLOCK
 
-![Teste com float utilizando o display block](/assets/images/posts/float-display-block.png "Teste com float utilizando o display block")
+![Teste com float utilizando o display block](/img/float-display-block.png "Teste com float utilizando o display block")
 
 Beleza por enquanto minha teoria esta certa! O elemento div não flutuo. O que apenas seguiu o fluxo foi o conteúdo dentro, seguindo ainda minha teoria dos elementos inline.
 
 ## DISPLAY INLINE
 
-![Teste com float utilizando o display inline](/assets/images/posts/float-display-inline.png "Teste com float utilizando o display inline")
+![Teste com float utilizando o display inline](/img/float-display-inline.png "Teste com float utilizando o display inline")
 
 Nada a comentar aqui também, teoria ainda funcionando perfeitamente! (OBS: Esse espaçamento enorme na altura é por conta do tamanho da fonte…(Ainda quero estudar mais sobre fontes e também falar sobre seus comportamentos malucos).
 
 ## DISPLAY INLINE BLOCK
 
-![Teste com float utilizando o display inline block](/assets/images/posts/float-display-inline-block.png "Teste com float utilizando o display inline block")
+![Teste com float utilizando o display inline block](/img/float-display-inline-block.png "Teste com float utilizando o display inline block")
 
 Ééé Bom… Seguindo a lógica, como esse elemento segue o comportamento híbrido, então ele realmente flutuará.
 
 Porém quando há um conteúdo que ultrapassada o fluxo, o comportamento será igual ao block.
 
-![Teste com float utilizando o display inline block com muitas palavras](/assets/images/posts/float-display-table-with-many-words.png "Teste com float utilizando o display inline block com muitas palavras")
+![Teste com float utilizando o display inline block com muitas palavras](/img/float-display-table-with-many-words.png "Teste com float utilizando o display inline block com muitas palavras")
 
 ## DISPLAY FLEX
 
-![Teste com float utilizando o display flex](/assets/images/posts/float-display-flex.png "Teste com float utilizando o display flex")
+![Teste com float utilizando o display flex](/img/float-display-flex.png "Teste com float utilizando o display flex")
 
 Tá… por essa eu realmente não esperava, o _display flex_ consegue também se adaptar ao fluxo do float!!! Justo ao nome flex ❤.
 
 O mais bacana do display flex é que ele sempre respeitará o fluxo do float, não importando com o tamanho do conteúdo dentro do elemento.
 
-![Teste com float utilizando o display flex com muitas palavras](/assets/images/posts/float-display-flex-with-many-words.png "Teste com float utilizando o display flex com muitas palavras")
+![Teste com float utilizando o display flex com muitas palavras](/img/float-display-flex-with-many-words.png "Teste com float utilizando o display flex com muitas palavras")
 
 ## DISPLAY TABLE
 
-![Teste com float utilizando o display table](/assets/images/posts/float-display-table.png "Teste com float utilizando o display table")
+![Teste com float utilizando o display table](/img/float-display-table.png "Teste com float utilizando o display table")
 
 Oi?? O _display table_ também se adapta ao fluxo do float. Tá bom… Está na hora de desistir da minha pequena teoria.
 
 Porém diferente do flex, ele não irá respeitar sempre o fluxo do float.
 
-![Teste com float utilizando o display table com muitas palavras](/assets/images/posts/float-display-table-with-many-words.png "Teste com float utilizando o display table com muitas palavras")
+![Teste com float utilizando o display table com muitas palavras](/img/float-display-table-with-many-words.png "Teste com float utilizando o display table com muitas palavras")
 
 ## DISPLAY BLOCK COM UMA LARGURA FIXA, A QUAL NÃO RESPEITA O FLUXO DO FLOAT
 
-![Teste com float utilizando o display block sem respeitar a largura fixa, a qual não respeita o fluxo do float](/assets/images/posts/float-display-block-with-width-without-respect-flow.png "Teste com float utilizando o display block sem respeitar a largura fixa, a qual não respeita o fluxo do float")
+![Teste com float utilizando o display block sem respeitar a largura fixa, a qual não respeita o fluxo do float](/img/float-display-block-with-width-without-respect-flow.png "Teste com float utilizando o display block sem respeitar a largura fixa, a qual não respeita o fluxo do float")
 
 Hum… Realmente faz sentido! Pois o conteúdo dentro do elemento sempre deve respeitar as dimensões do elemento pai (Nesse caso, coloquei uma largura fixa de 10% na div) . Neste caso como a largura do elemento é muito menor que o fluxo do float, o conteúdo não vai respeitar mais o mesmo.
 

@@ -5,9 +5,9 @@ description: >-
   como o Angular Material trabalha em sua tematização aplicada no framework.
   Nessa continuação vamos criar nosso próprio componente utilizando a
   tematização de paletas.
-slug: posts/angular-material-entendendo-como-funciona-sua-tematizacao-parte-II
-date: '2020-01-11 10:28:10'
-thumbnail: /assets/images/posts/angular-material-parte-2.png
+slug: angular-material-entendendo-como-funciona-sua-tematizacao-parte-II
+date: '2020-01-11'
+thumbnail: /img/angular-material-parte-2.png
 locale: pt-br
 ---
 No último post vimos sobre o Material Design e Angular Material. Falamos sobre como o Angular Material trabalha em sua tematização. Nessa continuação vamos criar nosso próprio componente utilizando a tematização de paletas.
@@ -270,7 +270,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 Agora temos total controle de customização das paletas podendo deixar todo componente criado baseado no estilo do Angular Material!
 
-![Exemplo do card component](/assets/images/posts/card-component-exemplo.jpg "Exemplo do card component")
+![Exemplo do card component](/img/card-component-exemplo.jpg "Exemplo do card component")
 
 Todo exemplo deste artigo está disponível online no [stackblitz](https://stackblitz.com/edit/angular-palette-theme).
 

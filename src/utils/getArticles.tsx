@@ -1,6 +1,14 @@
 import matter from 'gray-matter'
 
-import Main from 'components/Main'
+export type ArticleProps = {
+  title: string
+  description: string
+  date: string
+  locale: string
+  slug: string
+  thumbnail: string
+  content: string
+}
 
 type Content = {
   content: string
@@ -14,18 +22,7 @@ type Content = {
   }
 }
 
-const Articles = ({ contents }: { contents: Content[]}) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const articles = contents.map(blog => matter(blog))
-
-  return (
-    <Main>
-      test
-    </Main>
-  )
-}
-
-export const getStaticProps = async () => {
+export function getArticles() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const fs = require('fs')
   const files = fs.readdirSync(`${process.cwd()}/src/contents/articles`, 'utf-8') as string[]
@@ -38,14 +35,15 @@ export const getStaticProps = async () => {
     })
 
     return rawContent
-  })
+  }) as Content[]
 
-  return {
-    props: {
-      contents
+  return contents.map(contentData => {
+    const { content, data } = matter(contentData) as unknown as Content
+    return {
+      ...data,
+      content
     }
-  }
-
+  }) as ArticleProps[]
 }
 
-export default Articles
+
