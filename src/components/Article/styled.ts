@@ -10,6 +10,8 @@ export const Header = styled.header`
   ${({ theme }) => css`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
     padding: 0.4rem 1rem;
     background-color: ${theme.colors.white};
     color: ${theme.colors.bg};

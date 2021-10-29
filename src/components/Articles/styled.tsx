@@ -7,16 +7,11 @@ export const Wrapper = styled.div`
   `}
 `
 
-export const List = styled.ul`
-
-`
+export const List = styled.ul``
 
 export const Item = styled.li`
-  ${({ theme }) => css`
-    padding: 0.1rem 0;
-
-
-  `}
+  position: relative;
+  padding: 0.1rem 2rem;
 `
 
 export const Link = styled.a`
@@ -36,6 +31,8 @@ export const Link = styled.a`
 
     &:before {
       content: '>';
+      position: absolute;
+      left: 0;
       display: inline-block;
       margin-right: 1rem;
       visibility: hidden;
