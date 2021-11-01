@@ -1,9 +1,9 @@
 import Link from 'next/link'
+import { Article } from 'types/article'
+
 import * as S from './styled'
 
-import { ArticleProps } from 'utils/getArticles'
-
-const Articles = ({ articles }: { articles: ArticleProps[] }) => {
+const Articles = ({ articles }: { articles: Article[] }) => {
   return (
     <S.Wrapper>
       <S.List>

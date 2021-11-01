@@ -1,14 +1,5 @@
 import matter from 'gray-matter'
-
-export type ArticleProps = {
-  title: string
-  description: string
-  date: string
-  locale: string
-  slug: string
-  thumbnail: string
-  content: string
-}
+import { Article } from 'types/article'
 
 type Content = {
   content: string
@@ -43,7 +34,7 @@ export function getArticles() {
       ...data,
       content
     }
-  }) as ArticleProps[]
+  }) as Article[]
 }
 
 

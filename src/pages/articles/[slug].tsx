@@ -1,7 +1,8 @@
 
 import { GetStaticPropsContext } from 'next'
-import { getArticles, ArticleProps } from 'utils/getArticles'
+import { getArticles } from 'utils/getArticles'
 
+import { Article as ArticleProps } from 'types/article'
 import Main from 'components/Main'
 import Article from 'components/Article'
 

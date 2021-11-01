@@ -1,13 +1,8 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import * as S from './styled'
+import { Article as ArticleProps } from 'types/article'
 
-type ArticleProps = {
-  title: string
-  content: string,
-  date: string,
-  locale: string
-}
+import * as S from './styled'
 
 const Article = ({ title, date, locale, content }: ArticleProps) => (
   <S.Wrapper>

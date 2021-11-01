@@ -1,10 +1,11 @@
-import { getArticles, ArticleProps } from 'utils/getArticles'
+import { getArticles } from 'utils/getArticles'
 
+import { Article } from 'types/article'
 import Main from 'components/Main'
 import CodeEditor from 'components/CodeEditor'
 import Articles from 'components/Articles'
 
-const ArticlesPage = ({ articles }: { articles: ArticleProps[] }) => {
+const ArticlesPage = ({ articles }: { articles: Article[] }) => {
   return (
     <Main>
       <CodeEditor />
