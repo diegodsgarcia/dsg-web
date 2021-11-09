@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>diegodsgarcia</title>
         <meta name="description" content="Hello world to my website" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>
